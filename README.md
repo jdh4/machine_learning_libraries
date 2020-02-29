@@ -1,16 +1,20 @@
 # Intro to the Machine Learning Libraries
 
 ## About
-This guide presents tips on using the machine learning libraries on the HPC clusters at Princeton. It shows how to install the libraries and how to write Slurm scripts for their effective usage. We point which libraries can take advantage of multi-threading and GPUs. Machine learning theory is not covered here.
+This guide provides demonstrations of the effective usage of popular machine learning libraries on the HPC clusters at Princeton. It shows how to install the libraries and how to write Slurm scripts to take advantage of multi-threading and GPUs when possible. A comparison of the libraries is presented. Machine learning theory is not covered.
 
 ## Workshop Survey
 [Click here](https://forms.gle/WhoAcb1J82XVTqq38)
 
 ## Useful links
-[Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/education/online-tutorials/getting-started)  
-[OnComputingWell](https://oncomputingwell.princeton.edu)  
-[Research Computing FAQ](https://researchcomputing.princeton.edu/faq)  
-[AskRC](https://researchcomputing.princeton.edu/about/contact/ask-research-computing)
+-[PyTorch](https://pytorch.org)  
+-[TensorFlow](https://www.tensorflow.org)  
+-[Spark](https://spark.apache.org/docs/2.2.0/ml-guide.html)  
+-[MATLAB](https://www.mathworks.com/solutions/machine-learning.html)  
+-[Julia](https://juliacomputing.com/domains/ml-and-ai.html)  
+-[NVIDIA Rapids](https://rapids.ai/)  
+-[R](https://cran.r-project.org/web/views/MachineLearning.html)  
+-[Python](https://scikit-learn.org/stable/)  
 
 ## Getting Help
 
