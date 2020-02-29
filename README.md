@@ -22,4 +22,4 @@ If you encounter any difficulties while working with the machine learning librar
 
 ## Authorship
 
-This guide was created by Jonathan Halverson.
+This guide was created by Jonathan Halverson. Contributions have been made by David Turner and Ben Hicks.
