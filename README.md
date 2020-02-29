@@ -1,7 +1,7 @@
 # Intro to the Machine Learning Libraries
 
 ## About
-This guide presents an overview of using the HPC systems at Princeton. Specifically, it covers the HPC clusters as well as the storage system and visualization machine. Click on 00_quick_start above to get started.
+This guide presents tips on using the machine learning libraries on the HPC clusters at Princeton. It shows how to install the libraries and how to write Slurm scripts for their effective usage. Little to none ML theory is covered in this guide.
 
 ## Workshop Survey
 [Click here](https://forms.gle/WhoAcb1J82XVTqq38)
