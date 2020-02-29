@@ -1,4 +1,8 @@
-# Julia
+# Julia and Machine Learning
+
+According to the Julia website:
+
+> it is a flexible dynamic language, appropriate for scientific and numerical computing, with performance comparable to traditional statically-typed languages.
 
 ## Installing flux on TigerGPU
 
