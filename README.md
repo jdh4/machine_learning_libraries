@@ -4,8 +4,8 @@
 This guide provides demonstrations of the effective usage of popular machine learning libraries on the HPC clusters at Princeton. It shows how to install the libraries and how to write Slurm scripts to take advantage of multi-threading and GPUs when possible. A comparison of the libraries is presented. Machine learning theory is not covered.
 
 ## Useful links
-- [PyTorch](https://pytorch.org)  
-- [TensorFlow](https://www.tensorflow.org)  
+- [PyTorch at Princeton](https://github.com/PrincetonUniversity/install_pytorch) | [PyTorch.org](https://pytorch.org)  
+- [TensorFlow at Princeton](https://github.com/PrincetonUniversity/slurm_mnist) | [TensorFlow](https://www.tensorflow.org)  
 - [Spark](https://spark.apache.org/docs/2.2.0/ml-guide.html)  
 - [MATLAB](https://www.mathworks.com/solutions/machine-learning.html)  
 - [Julia](https://juliacomputing.com/domains/ml-and-ai.html)  
