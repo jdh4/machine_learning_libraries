@@ -78,6 +78,5 @@ Note that there are no GPUs on the head node of TigerGPU and no internet connect
 [Flux website](https://fluxml.ai/)  
 [Flux documentation](https://fluxml.ai/Flux.jl/stable/)  
 [Flux on GitHub](https://github.com/FluxML/Flux.jl)  
-[Knet documentation](https://denizyuret.github.io/Knet.jl/latest/)
+[Knet documentation](https://denizyuret.github.io/Knet.jl/latest/)  
 [Knet on GitHub](https://github.com/denizyuret/Knet.jl)  
-
