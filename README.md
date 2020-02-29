@@ -6,7 +6,7 @@ This guide provides demonstrations of the effective usage of popular machine lea
 ## Useful links
 - [PyTorch at Princeton](https://github.com/PrincetonUniversity/install_pytorch)  |  [PyTorch.org](https://pytorch.org)  
 - [TensorFlow at Princeton](https://github.com/PrincetonUniversity/slurm_mnist) | [TensorFlow](https://www.tensorflow.org)  
-- [Spark](https://researchcomputing.princeton.edu/faq/spark-via-slurm) | [Spark website for ML](https://spark.apache.org/docs/2.2.0/ml-guide.html)  
+- [Spark at Princeton](https://researchcomputing.princeton.edu/faq/spark-via-slurm) | [Spark website for ML](https://spark.apache.org/docs/2.2.0/ml-guide.html)  
 - [MATLAB at Princeton](https://researchcomputing.princeton.edu/matlab) | [MATLAB website for ML](https://www.mathworks.com/solutions/machine-learning.html)  
 - [Julia at Princeton](https://researchcomputing.princeton.edu/julia) | [Julia ML and AI](https://juliacomputing.com/domains/ml-and-ai.html)  
 - [NVIDIA Rapids](https://rapids.ai/)  
