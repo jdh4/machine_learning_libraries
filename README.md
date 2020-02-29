@@ -7,14 +7,14 @@ This guide provides demonstrations of the effective usage of popular machine lea
 [Click here](https://forms.gle/WhoAcb1J82XVTqq38)
 
 ## Useful links
--[PyTorch](https://pytorch.org)  
--[TensorFlow](https://www.tensorflow.org)  
--[Spark](https://spark.apache.org/docs/2.2.0/ml-guide.html)  
--[MATLAB](https://www.mathworks.com/solutions/machine-learning.html)  
--[Julia](https://juliacomputing.com/domains/ml-and-ai.html)  
--[NVIDIA Rapids](https://rapids.ai/)  
--[R](https://cran.r-project.org/web/views/MachineLearning.html)  
--[Python](https://scikit-learn.org/stable/)  
+- [PyTorch](https://pytorch.org)  
+- [TensorFlow](https://www.tensorflow.org)  
+- [Spark](https://spark.apache.org/docs/2.2.0/ml-guide.html)  
+- [MATLAB](https://www.mathworks.com/solutions/machine-learning.html)  
+- [Julia](https://juliacomputing.com/domains/ml-and-ai.html)  
+- [NVIDIA Rapids](https://rapids.ai/)  
+- [R](https://cran.r-project.org/web/views/MachineLearning.html)  
+- [Python](https://scikit-learn.org/stable/)  
 
 ## Getting Help
 
