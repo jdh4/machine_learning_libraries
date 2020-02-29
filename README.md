@@ -7,11 +7,11 @@ This guide provides demonstrations of the effective usage of popular machine lea
 - [PyTorch at Princeton](https://github.com/PrincetonUniversity/install_pytorch) | [PyTorch.org](https://pytorch.org)  
 - [TensorFlow at Princeton](https://github.com/PrincetonUniversity/slurm_mnist) | [TensorFlow](https://www.tensorflow.org)  
 - [Spark](https://spark.apache.org/docs/2.2.0/ml-guide.html)  
-- [MATLAB](https://www.mathworks.com/solutions/machine-learning.html)  
+- [MATLAB at Princeton](https://researchcomputing.princeton.edu/matlab) | [MATLAB website for ML](https://www.mathworks.com/solutions/machine-learning.html)  
 - [Julia](https://juliacomputing.com/domains/ml-and-ai.html)  
 - [NVIDIA Rapids](https://rapids.ai/)  
-- [R](https://cran.r-project.org/web/views/MachineLearning.html)  
-- [Python](https://scikit-learn.org/stable/)  
+- [R at Princeton](https://github.com/PrincetonUniversity/installing_R_packages) | [R ML packages on CRAN](https://cran.r-project.org/web/views/MachineLearning.html)  
+- [Python](https://github.com/PrincetonUniversity/installing_python_packages) | [Scikit-Learn website](https://scikit-learn.org/stable/)  
 
 ## Workshop Survey
 [Click here](https://forms.gle/WhoAcb1J82XVTqq38)
