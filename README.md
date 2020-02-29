@@ -1,7 +1,7 @@
 # Intro to the Machine Learning Libraries
 
 ## About
-This guide presents tips on using the machine learning libraries on the HPC clusters at Princeton. It shows how to install the libraries and how to write Slurm scripts for their effective usage. Little to none ML theory is covered in this guide.
+This guide presents tips on using the machine learning libraries on the HPC clusters at Princeton. It shows how to install the libraries and how to write Slurm scripts for their effective usage. We point which libraries can take advantage of multi-threading and GPUs. Machine learning theory is not covered here.
 
 ## Workshop Survey
 [Click here](https://forms.gle/WhoAcb1J82XVTqq38)
