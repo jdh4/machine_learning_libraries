@@ -80,3 +80,4 @@ Note that there are no GPUs on the head node of TigerGPU and no internet connect
 [Flux on GitHub](https://github.com/FluxML/Flux.jl)  
 [Knet documentation](https://denizyuret.github.io/Knet.jl/latest/)  
 [Knet on GitHub](https://github.com/denizyuret/Knet.jl)  
+[TensorFlow.jl](https://github.com/malmaud/TensorFlow.jl)
