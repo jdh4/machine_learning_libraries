@@ -1,10 +1,12 @@
 # Julia and Machine Learning
 
+## About Julia
+
 According to the [Julia](https://docs.julialang.org/en/v1/) website:
 
 > [Julia] is a flexible dynamic language, appropriate for scientific and numerical computing, with performance comparable to traditional statically-typed languages. Once you understand how Julia works, it's easy to write code that's nearly as fast as C. Julia features optional typing, multiple dispatch, and good performance, achieved using type inference and just-in-time (JIT) compilation, implemented using LLVM. It is multi-paradigm, combining features of imperative, functional, and object-oriented programming.
 
-## Installing flux on TigerGPU
+## Flux
 
 ```bash
 $ ssh tigergpu
@@ -71,6 +73,13 @@ Float32[-0.835879, 0.3685953, 1.0108142, -0.29181987, 0.31272212]
 ```
 
 Note that there are no GPUs on the head node of TigerGPU and no internet connection on the compute nodes. To run MNIST for example you will need to download the data first.
+
+## Knet
+
+
+## TensorFlow
+
+
 
 ## More Info
 
