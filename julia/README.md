@@ -19,15 +19,17 @@ $ julia
 julia> ]
 (v1.2) pkg> add Flux, Zygote, Metalhead, Images
 # press the backspace or delete key
+julia> using Metalhead
+julia> Metalhead.download(CIFAR10)
 julia> exit()
 ```
 
 Now run the script:
 
 ```bash
-$ cd intro_machine_learning_libs/julia
+$ cd intro_machine_learning_libs/julia/flux_cpu
 $ wget https://raw.githubusercontent.com/FluxML/model-zoo/master/tutorials/60-minute-blitz.jl
-$ cd cpu
+# use text editor to comment out line 288 since we already downloaded the images
 $ sbatch job.slurm  # this will take about 50 minutes to run
 ```
 
@@ -59,7 +61,7 @@ The script took 50 minutes to run and required 2.4 GB of memory.
 First we need to add the GPU packages:
 
 ```bash
-$ module load julia/1.2.0 module load cudatoolkit/10.1 cudnn/cuda-10.1/7.6.3
+$ module load julia/1.2.0 cudatoolkit/10.1 cudnn/cuda-10.1/7.6.3
 $ julia
 julia> ]
 (v1.2) pkg> add CuArrays
@@ -67,8 +69,13 @@ $ # press the backspace or delete key
 julia> exit()
 ```
 
+
+
 ```bash
-$ cd intro_machine_learning_libs/julia/gpu
+$ cd intro_machine_learning_libs/julia/flux_gpu
+$ wget https://raw.githubusercontent.com/FluxML/model-zoo/master/tutorials/60-minute-blitz.jl
+# use text editor to comment out line 288 since we already downloaded the images
+# use text editor to uncomment line 276 to use the GPU
 $ sbatch job.slurm  # this will take about 50 minutes to run
 ```
 
