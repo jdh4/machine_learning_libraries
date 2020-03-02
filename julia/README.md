@@ -122,6 +122,12 @@ Note that there are no GPUs on the head node of TigerGPU and no internet connect
 
 There is a Julia package called [TensorFlow.jl](https://github.com/malmaud/TensorFlow.jl) that provides an interface to TensorFlow. It can be used with up to version 1.12 of TensorFlow. It appears that the number of commits is decreasing with time on this repo.
 
+## Conventional Models
+
+[ScikitLearn.jl](https://github.com/cstjean/ScikitLearn.jl) This using PyCall  
+[Machine Learning Toolbox for Julia](https://github.com/alan-turing-institute/MLJ.jl) MLJ is native Julia (it include ScikitLearn.jl)  
+[CombineML](https://github.com/ppalmes/CombineML.jl) CombineML is a heterogeneous ensemble learning package for Julia
+
 ## More Info
 
 [Julia Documentation](https://docs.julialang.org/en/v1/)  
