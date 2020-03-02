@@ -130,4 +130,5 @@ There is a Julia package called [TensorFlow.jl](https://github.com/malmaud/Tenso
 [Flux on GitHub](https://github.com/FluxML/Flux.jl)  
 [Knet documentation](https://denizyuret.github.io/Knet.jl/latest/)  
 [Knet on GitHub](https://github.com/denizyuret/Knet.jl)  
+[DecisionTree.jl](https://github.com/bensadeghi/DecisionTree.jl)
 
