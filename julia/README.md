@@ -8,6 +8,8 @@ According to the [Julia](https://docs.julialang.org/en/v1/) website:
 
 ## Flux
 
+Here is a 60-minute [introduction](https://github.com/FluxML/model-zoo/blob/master/tutorials/60-minute-blitz.jl) to Flux.
+
 ```bash
 $ ssh tigergpu
 $ module load julia/1.2.0 cudatoolkit/10.2 cudnn/cuda-10.2/7.6.5
