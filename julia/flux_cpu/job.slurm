@@ -9,4 +9,4 @@
 module purge
 module load julia/1.2.0
 
-julia ../flux_cifar10/60-minute-blitz.jl
+julia ../60-minute-blitz.jl
