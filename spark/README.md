@@ -33,4 +33,4 @@ The documentaion for the Python API with [Spark ML 2.2](https://spark.apache.org
 
 ## Getting Help
 
-If you encounter any difficulties with using Spark on the HPC clusters then please send an email to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> or attend a <a href="https://researchcomputing.princeton.edu/education/help-sessions">help session</a>.
+If you encounter any difficulties with using Spark on the HPC clusters then please send an email to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> or attend a walk-in <a href="https://researchcomputing.princeton.edu/education/help-sessions">help session</a>.
