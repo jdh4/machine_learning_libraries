@@ -18,7 +18,7 @@ This guide provides demonstrations of the effective usage of popular machine lea
 
 ## Getting Help
 
-If you encounter any difficulties while working with the machine learning libraries on the HPC clusters then please send an email to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> or attend a <a href="https://researchcomputing.princeton.edu/education/help-sessions">help session</a>.
+If you encounter any difficulties while working with the machine learning libraries on the HPC clusters then please send an email to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> or attend a walk-in <a href="https://researchcomputing.princeton.edu/education/help-sessions">help session</a>.
 
 ## Authorship
 
