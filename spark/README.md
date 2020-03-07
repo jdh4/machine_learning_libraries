@@ -10,7 +10,7 @@ Spark 2.2 is available on the Princeton HPC clusters. See the [Python API](https
 
 ## A Simple DataFrame
 
-The session below illustrates how to create a simple DataFrame in he PySpark shell:
+The session below illustrates how to create a simple DataFrame in the PySpark shell during an interactve session:
 
 ```bash
 $ ssh della  # or another cluster
