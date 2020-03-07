@@ -204,9 +204,7 @@ module purge
 module load anaconda3/2019.10
 module load spark/hadoop2.7/2.2.0
 
-date
 spark-start
-date
 spark-submit --total-executor-cores 6 --executor-memory 4G random_forest_classifier_example.py
 ```
 
