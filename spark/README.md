@@ -1,7 +1,5 @@
 # Spark
 
-## About
-
 Spark is big data processing engine with machine learning functionality. It's greatest utility is that the parallelization is done automatically. The user writes a script and Spark handles the calculations. It offers multiple frontend languages.
 
 Spark 2.2 is available on the HPC clusters. See the [Python API](https://spark.apache.org/docs/2.2.0/api/python/index.html).
@@ -34,7 +32,44 @@ The documentaion for the Python API with [Spark ML 2.2](https://spark.apache.org
 The examples are here:
 
 ```bash
-/usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/examples/src/main/python/ml
+# ssh tiger, della, perseus, adroit
+
+$ cd /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/examples/src/main
+$ ls
+java  python  r  resources  scala
+$ cd /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/examples/src/main/python/ml
+$ ls
+aft_survival_regression.py                   logistic_regression_with_elastic_net.py
+als_example.py                               max_abs_scaler_example.py
+binarizer_example.py                         min_hash_lsh_example.py
+bisecting_k_means_example.py                 min_max_scaler_example.py
+bucketed_random_projection_lsh_example.py    multiclass_logistic_regression_with_elastic_net.py
+bucketizer_example.py                        multilayer_perceptron_classification.py
+chisq_selector_example.py                    naive_bayes_example.py
+chi_square_test_example.py                   n_gram_example.py
+correlation_example.py                       normalizer_example.py
+count_vectorizer_example.py                  onehot_encoder_example.py
+cross_validator.py                           one_vs_rest_example.py
+dataframe_example.py                         pca_example.py
+dct_example.py                               pipeline_example.py
+decision_tree_classification_example.py      polynomial_expansion_example.py
+decision_tree_regression_example.py          quantile_discretizer_example.py
+elementwise_product_example.py               random_forest_classifier_example.py
+estimator_transformer_param_example.py       random_forest_regressor_example.py
+fpgrowth_example.py                          rformula_example.py
+gaussian_mixture_example.py                  sql_transformer.py
+generalized_linear_regression_example.py     standard_scaler_example.py
+gradient_boosted_tree_classifier_example.py  stopwords_remover_example.py
+gradient_boosted_tree_regressor_example.py   string_indexer_example.py
+imputer_example.py                           tf_idf_example.py
+index_to_string_example.py                   tokenizer_example.py
+isotonic_regression_example.py               train_validation_split.py
+kmeans_example.py                            vector_assembler_example.py
+lda_example.py                               vector_indexer_example.py
+linear_regression_with_elastic_net.py        vector_slicer_example.py
+linearsvc.py                                 word2vec_example.py
+logistic_regression_summary_example.py
+
 ```
 
 ```bash
