@@ -171,7 +171,7 @@ if __name__ == "__main__":
 Run the commands below:
 
 ```bash
-$ git clone
+$ git clone https://github.com/PrincetonUniversity/intro_ml_libs
 $ cd intro_ml_libs/spark
 $ cp /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/examples/src/main/python/ml/random_forest_classifier_example.py .
 $ cp /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/data/mllib/sample_libsvm_data.txt .
