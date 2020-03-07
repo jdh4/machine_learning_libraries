@@ -177,10 +177,10 @@ $ cp /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/examples/src/main/python/ml/r
 $ cp /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/data/mllib/sample_libsvm_data.txt .
 ```
 
-Use a text editor to replace line 43 of random_forest_classifier_example.py with this:
+Use a text editor to replace line 39 of `random_forest_classifier_example.py` with this:
 
 ```bash
-
+    data = spark.read.format("libsvm").load("sample_libsvm_data.txt")
 ```
 
 Now submit the job:
@@ -194,28 +194,44 @@ You can see the updated examples on [GitHub](https://github.com/apache/spark/tre
 ```bash
 #!/bin/bash
 #SBATCH --job-name=spark-ml      # create a short name for your job
-#SBATCH --nodes=2                # node count
-#SBATCH --ntasks-per-node=3      # total number of tasks across all nodes
-#SBATCH --cpus-per-task=4        # cpu-cores per task (>1 if multi-threaded tasks)
-#SBATCH --mem=12G                # memory per node
-#SBATCH --time=00:00:30          # total run time limit (HH:MM:SS)
-#SBATCH --mail-type=all          # send email on job start, end and fail
-#SBATCH --mail-user=<YourNetID>@princeton.edu
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks-per-node=2      # total number of tasks across all nodes
+#SBATCH --cpus-per-task=3        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem=8G                 # memory per node
+#SBATCH --time=00:15:00          # total run time limit (HH:MM:SS)
 
 module purge
 module load anaconda3/2019.10
 module load spark/hadoop2.7/2.2.0
 
+date
 spark-start
-spark-submit --total-executor-cores 24 --executor-memory 4G pi.py 100
-/usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/examples/src/main/python/ml/als_example.py
+date
+spark-submit --total-executor-cores 6 --executor-memory 4G random_forest_classifier_example.py
 ```
 
 The output of the run is:
 
 ```bash
 $ cat slurm.out
+...
+  total: 4.680999166
+  findSplits: 2.825805252
+  findBestSplits: 1.183317259
+  chooseSplits: 1.179836058
++--------------+-----+--------------------+
+|predictedLabel|label|            features|
++--------------+-----+--------------------+
+|           0.0|  0.0|(692,[98,99,100,1...|
+|           0.0|  0.0|(692,[100,101,102...|
+|           0.0|  0.0|(692,[124,125,126...|
+|           0.0|  0.0|(692,[124,125,126...|
+|           0.0|  0.0|(692,[126,127,128...|
++--------------+-----+--------------------+
+only showing top 5 rows
 
+Test Error = 0
+...
 ```
 
 ### Spark at Princeton
