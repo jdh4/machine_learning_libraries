@@ -175,6 +175,17 @@ $ git clone
 $ cd intro_ml_libs/spark
 $ cp /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/examples/src/main/python/ml/random_forest_classifier_example.py .
 $ cp /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/data/mllib/sample_libsvm_data.txt .
+```
+
+Use a text editor to replace line 43 of random_forest_classifier_example.py with this:
+
+```bash
+
+```
+
+Now submit the job:
+
+```bash
 $ sbatch job.submit
 ```
 
@@ -200,14 +211,18 @@ spark-submit --total-executor-cores 24 --executor-memory 4G pi.py 100
 /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/examples/src/main/python/ml/als_example.py
 ```
 
+The output of the run is:
+
+```bash
+$ cat slurm.out
+
+```
+
 ### Spark at Princeton
 
-[Spark tutorial](https://researchcomputing.princeton.edu/computational-hardware/hadoop/spark-tut)
-
-[Tuning Spark applications](https://researchcomputing.princeton.edu/computational-hardware/hadoop/spark-memory)
-
+[Spark tutorial](https://researchcomputing.princeton.edu/computational-hardware/hadoop/spark-tut)  
+[Tuning Spark applications](https://researchcomputing.princeton.edu/computational-hardware/hadoop/spark-memory)  
 [Spark application submission via Slurm](https://researchcomputing.princeton.edu/faq/spark-via-slurm)
-
 
 ## Getting Help
 
