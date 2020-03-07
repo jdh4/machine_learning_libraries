@@ -10,7 +10,7 @@ This guide provides demonstrations of the effective usage of popular machine lea
 - [MATLAB at Princeton](https://researchcomputing.princeton.edu/matlab) | [MATLAB website for ML](https://www.mathworks.com/solutions/machine-learning.html)  
 - [Julia at Princeton](https://researchcomputing.princeton.edu/julia) | [Julia ML and AI](https://juliacomputing.com/domains/ml-and-ai.html)  
 - [NVIDIA Rapids](https://rapids.ai/)  
-- [R at Princeton](https://github.com/PrincetonUniversity/installing_R_packages) | [R ML packages on CRAN](https://cran.r-project.org/web/views/MachineLearning.html)  
+- [R at Princeton](https://researchcomputing.princeton.edu/R) | [R ML packages on CRAN](https://cran.r-project.org/web/views/MachineLearning.html)  
 - [Python at Princeton](https://github.com/PrincetonUniversity/installing_python_packages) | [Scikit-Learn website](https://scikit-learn.org/stable/)  
 
 ## Workshop Survey
