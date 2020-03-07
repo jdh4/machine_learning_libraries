@@ -42,7 +42,7 @@ $ conda clean -a
 
 ## Using Rapids
 
-Note that Rapids requires a GPU with compute capability of 6.0+. This means the K40c GPUs on adroit-h11g4 cannot be used (they are CC 3.5).
+Note that Rapids requires a GPU with compute capability of 6.0+. This means the K40c GPUs on adroit-h11g4 cannot be used (they are CC 3.5). We mut request the V100 node (CC 7.0). TigerGPU is CC 6.0.
 
 ```bash
 $ salloc -N 1 -n 1 -t 5 --gres=gpu:tesla_v100:1
