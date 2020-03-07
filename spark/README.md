@@ -6,22 +6,13 @@ Spark 2.2 is available on the HPC clusters. See the [Python API](https://spark.a
 
 Mllib is the old library. The new one which is based on DataFrames is Spark ML.
 
-[Spark tutorial](https://researchcomputing.princeton.edu/computational-hardware/hadoop/spark-tut)
-
-[Tuning Spark applications](https://researchcomputing.princeton.edu/computational-hardware/hadoop/spark-memory)
-
-[Spark application submission via Slurm](https://researchcomputing.princeton.edu/faq/spark-via-slurm)
-
 ```bash
 $ ssh della  # or another cluster
-$ salloc -N 1 -n 1 -t 30:00
+$ salloc -N 1 -n 1 -t 10
 $ module load anaconda3 spark/hadoop2.7/2.2.0
 $ spark-start
 $ pyspark
 
->>> from pyspark.sql import SparkSession
->>> spark = SparkSession.builder.master("local[4]").appName("Wine classification").getOrCreate()
->>> df = spark.read.csv('my.csv', header=False, inferSchema=True)
 >>> myRDD = sc.parallelize([('Denver', 5280), ('Albuquerque', 5312), ('Mexico City', 7382)])
 >>> df = sqlContext.createDataFrame(myRDD, ['City', 'Elevation'])
 >>> df.show()
@@ -96,6 +87,8 @@ logistic_regression_summary_example.py
 
 ```
 
+You can see the updated examples on [GitHub](https://github.com/apache/spark/tree/master/examples/src/main).
+
 ```bash
 #!/bin/bash
 #SBATCH --job-name=spark-ml      # create a short name for your job
@@ -116,7 +109,13 @@ spark-submit --total-executor-cores 24 --executor-memory 4G pi.py 100
 /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/examples/src/main/python/ml/als_example.py
 ```
 
-### 
+### Spark at Princeton
+
+[Spark tutorial](https://researchcomputing.princeton.edu/computational-hardware/hadoop/spark-tut)
+
+[Tuning Spark applications](https://researchcomputing.princeton.edu/computational-hardware/hadoop/spark-memory)
+
+[Spark application submission via Slurm](https://researchcomputing.princeton.edu/faq/spark-via-slurm)
 
 
 ## Getting Help
