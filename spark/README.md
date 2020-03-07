@@ -2,11 +2,13 @@
 
 Spark is big data processing engine with machine learning functionality. It's greatest utility is that the parallelization is done automatically. The user writes a script and Spark handles the calculations. It offers multiple frontend languages.
 
-- The basic idea is to store the data in a DataFrame and distribute the data across many nodes. The underlying data structure is the resilent distributed datasets (RDD).  
-- Lazy evaluation of the Spark is used. This means operations are only performed when needed. Transformation enter as a node in the graph. Actions cause the graph to be evaluated. The result of computations can be cached.
+- The basic idea is to store the data in a DataFrame which is distributed over many nodes. The underlying data structure is the resilent distributed datasets (RDD).  Think of an RDD of a list of objects.
+
+- Lazy evaluation is used. Operations in the Spark script which transform an RDD translate to a node in the computation graph. Actions cause the graph to be evaluated. Results can be cached.
 
 Spark 2.2 is available on the HPC clusters. See the [Python API](https://spark.apache.org/docs/2.2.0/api/python/index.html).
 
+The session below illustrates how to create a simple DataFrame in he PySpark shell:
 
 ```bash
 $ ssh della  # or another cluster
@@ -24,6 +26,14 @@ $ pyspark
 |     Denver|     5280|
 |Albuquerque|     5312|
 |Mexico City|     7382|
++-----------+---------+
+>>> df = df.filter(df["Elevation"] < 6000)
+>>> df.show()
++-----------+---------+
+|       City|Elevation|
++-----------+---------+
+|     Denver|     5280|
+|Albuquerque|     5312|
 +-----------+---------+
 >>> exit()
 $ exit
