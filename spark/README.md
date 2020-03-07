@@ -12,6 +12,30 @@ Mllib is the old library. The new one which is based on DataFrames is Spark ML.
 
 [Spark application submission via Slurm](https://researchcomputing.princeton.edu/faq/spark-via-slurm)
 
+```bash
+$ ssh della  # or another cluster
+$ salloc -N 1 -n 1 -t 30:00
+$ module load anaconda3 spark/hadoop2.7/2.2.0
+$ spark-start
+$ pyspark
+
+>>> from pyspark.sql import SparkSession
+>>> spark = SparkSession.builder.master("local[4]").appName("Wine classification").getOrCreate()
+>>> df = spark.read.csv('my.csv', header=False, inferSchema=True)
+>>> myRDD = sc.parallelize([('Denver', 5280), ('Albuquerque', 5312), ('Mexico City', 7382)])
+>>> df = sqlContext.createDataFrame(myRDD, ['City', 'Elevation'])
+>>> df.show()
++-----------+---------+
+|       City|Elevation|
++-----------+---------+
+|     Denver|     5280|
+|Albuquerque|     5312|
+|Mexico City|     7382|
++-----------+---------+
+>>> exit()
+$ exit
+```
+
 ## Hello World on the HPC Clusters
 
 If you are new to Spark then start by running this simple example:
