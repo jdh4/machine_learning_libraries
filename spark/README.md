@@ -41,7 +41,7 @@ $ pyspark
 $ exit
 ```
 
-## Hello World on the HPC Clusters
+## Hello World with the Slurm Job Scheduler
 
 If you are new to Spark then start by running this simple example:
 
@@ -54,17 +54,16 @@ $ wget https://raw.githubusercontent.com/apache/spark/master/examples/src/main/p
 $ sbatch job.slurm
 ```
 
-## Machine Learning Examples with Spark
+## Machine Learning
+
+Spark ML is the machine learning component of Spark. The previous library was called mllib.
 
 The documentaion for the Python API with [Spark ML 2.2](https://spark.apache.org/docs/2.2.0/api/python/pyspark.ml.html) is here.
 
-Mllib is the old library. The new one which is based on DataFrames is Spark ML.
-
-The examples are here:
+The Spark 2.2 machine learning examples are here:
 
 ```bash
 # ssh tiger, della, perseus, adroit
-
 $ cd /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/examples/src/main
 $ ls
 java  python  r  resources  scala
