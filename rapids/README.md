@@ -9,6 +9,7 @@
 You can request more space in `/home/<YourNetID>` for installing software but because Conda environment are easy to remake we will do the installation on `/scratch/network/<YourNetID>`. Note that this filesystem is not backed up but it provides a vast amount of space (100 GB by default).
 
 ```bash
+$ ssh adroit
 $ cd
 $ vim .condarc
 ```
