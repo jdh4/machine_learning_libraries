@@ -41,3 +41,23 @@ $ conda clean -a
 ```
 
 ## Using Rapids
+
+Note that Rapids requires a GPU with compute capability of 6.0+. This means the K40c GPUs on adroit-h11g4 cannot be used (they are CC 3.5).
+
+```bash
+$ salloc -N 1 -n 1 -t 5 --gres=gpu:tesla_v100:1
+$ module load anaconda3
+$ conda activate /scratch/network/$USER/rapids-env
+$ python
+>>> import cudf
+>>> s = cudf.Series([1, 2, 3, None, 4])
+>>> s
+0       1
+1       2
+2       3
+3    null
+4       4
+dtype: int64
+>>> exit()
+$ exit
+```
