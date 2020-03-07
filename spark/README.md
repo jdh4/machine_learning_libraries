@@ -4,7 +4,7 @@ Spark is big data processing engine with modules for streaming, SQL, graphs, mac
 
 - The basic idea is to store the data in a DataFrame which is distributed over many nodes. The underlying data structure is the resilent distributed datasets (RDD).  Think of an RDD of a list of objects.
 
-- Lazy evaluation is used. Operations in the Spark script which transform an RDD translate to a node in the computation graph. Actions cause the graph to be evaluated. Results can be cached.
+- Lazy evaluation is used. Operations in the Spark script which transform an RDD are translated to a node in the computation graph. Actions cause the graph to be evaluated. Intermediate results can be cached in memory and/or disk.
 
 Spark 2.2 is available on the Princeton HPC clusters. See the [Python API](https://spark.apache.org/docs/2.2.0/api/python/index.html).
 
