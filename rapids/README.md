@@ -4,6 +4,12 @@ Built based on the Apache Arrow columnar memory format, cuDF is a GPU DataFrame 
 
 cuDF provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
 
+cuML is a suite of libraries that implement machine learning algorithms and mathematical primitives functions that share compatible APIs with other RAPIDS projects.
+
+cuML enables data scientists, researchers, and software engineers to run traditional tabular ML tasks on GPUs without going into the details of CUDA programming. In most cases, cuML's Python API matches the API from scikit-learn.
+
+For large datasets, these GPU-based implementations can complete 10-50x faster than their CPU equivalents.
+
 <p align="center"><img src="https://github.com/rapidsai/cudf/blob/branch-0.13/img/rapids_arrow.png" width="80%"/></p>
 
 [Getting started](https://rapids.ai/start.html)
