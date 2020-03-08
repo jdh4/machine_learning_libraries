@@ -1,6 +1,10 @@
 # NVIDIA Rapids
 
-"Pandas and Scikit-Learn" on GPUs.
+Built based on the Apache Arrow columnar memory format, cuDF is a GPU DataFrame library for loading, joining, aggregating, filtering, and otherwise manipulating data.
+
+cuDF provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
+
+![nvidia_rapids](https://github.com/rapidsai/cudf/blob/branch-0.13/img/rapids_arrow.png)
 
 [Getting started](https://rapids.ai/start.html)
 
