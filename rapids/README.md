@@ -45,7 +45,7 @@ After the installation one can recover space by deleting the index cache, lock f
 $ conda clean -a
 ```
 
-## Using Rapids
+## Using cuDF
 
 Note that Rapids requires a GPU with compute capability of 6.0+. This means the K40c GPUs on adroit-h11g4 cannot be used (they are CC 3.5). We mut request the V100 node (CC 7.0). TigerGPU is CC 6.0.
 
@@ -66,3 +66,46 @@ dtype: int64
 >>> exit()
 $ exit
 ```
+
+See this [guide](https://rapidsai.github.io/projects/cudf/en/0.12.0/10min.html) for a 10-minute introduction to cuDF and Dask-cuDF.
+
+## Machine Learning Example
+
+```bash
+$ conda activate /scratch/network/$USER/rapids-env
+$ conda install scikit-learn ipywidgets
+$ wget https://raw.githubusercontent.com/rapidsai/notebooks/branch-0.13/cuml/svm_demo.ipynb
+$ salloc -N 1 -n 1 -t 5 --gres=gpu:tesla_v100:1
+```
+
+This [example](https://github.com/rapidsai/notebooks/blob/branch-0.13/cuml/svm_demo.ipynb) can be ran as follows:
+
+```bash
+$ ipython svm_demo.py 
+CPU times: user 1.99 s, sys: 786 ms, total: 2.78 s
+Wall time: 3.55 s
+CPU times: user 48.1 s, sys: 258 ms, total: 48.4 s
+Wall time: 48.5 s
+CPU times: user 196 ms, sys: 27 ms, total: 223 ms
+Wall time: 230 ms
+CPU times: user 8.91 s, sys: 0 ns, total: 8.91 s
+Wall time: 8.93 s
+Accuracy: cumlSVC 96.46000000000001%, sklSVC 96.46000000000001%
+CPU times: user 851 ms, sys: 68.8 ms, total: 920 ms
+Wall time: 942 ms
+CPU times: user 477 ms, sys: 318 ms, total: 796 ms
+Wall time: 798 ms
+CPU times: user 13 s, sys: 70.8 ms, total: 13.1 s
+Wall time: 13.1 s
+CPU times: user 6.71 ms, sys: 991 µs, total: 7.7 ms
+Wall time: 7.79 ms
+CPU times: user 2.72 s, sys: 0 ns, total: 2.72 s
+Wall time: 2.72 s
+R2 score: cumlSVR 0.940174859165765, sklSVR 0.9401745984283644
+CPU times: user 198 ms, sys: 105 ms, total: 303 ms
+Wall time: 304 ms
+```
+
+## Useful Links
+
+[Example Notebooks](https://github.com/rapidsai/notebooks)
