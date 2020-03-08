@@ -240,7 +240,7 @@ Test Error = 0
 
 ### More links
 
-[Sparkling Water](https://www.h2o.ai/products/h2o-sparkling-water/)
+[Sparkling Water](https://www.h2o.ai/products/h2o-sparkling-water/)  
 [Deep Learning Pipelines](https://github.com/databricks/spark-deep-learning)
 
 ## Getting Help
