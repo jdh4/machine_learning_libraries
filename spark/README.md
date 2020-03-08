@@ -238,6 +238,10 @@ Test Error = 0
 [Tuning Spark applications](https://researchcomputing.princeton.edu/computational-hardware/hadoop/spark-memory)  
 [Spark application submission via Slurm](https://researchcomputing.princeton.edu/faq/spark-via-slurm)
 
+### More links
+
+[Sparkling Water](https://www.h2o.ai/products/h2o-sparkling-water/)
+
 ## Getting Help
 
 If you encounter any difficulties with using Spark on the HPC clusters then please send an email to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> or attend a walk-in <a href="https://researchcomputing.princeton.edu/education/help-sessions">help session</a>.
