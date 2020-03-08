@@ -211,3 +211,4 @@ Wall time: 304 ms
 ## Useful Links
 
 [Example Notebooks](https://github.com/rapidsai/notebooks)
+[NVIDIA Rapids on GitHub](https://github.com/rapidsai)
