@@ -41,8 +41,15 @@ $ conda config --show
 Now perform the installation by copying and pasting the following two lines:
 
 ```
-conda create --prefix /scratch/network/$USER/rapids-env -c rapidsai -c nvidia -c conda-forge \
+$ conda create --prefix /scratch/network/$USER/rapids-env -c rapidsai -c nvidia -c conda-forge \
 -c defaults cuml=0.12 python=3.7 cudatoolkit=10.0
+```
+
+Or install all components including dask-cudf:
+
+```bash
+$ conda create --prefix /scratch/network/jdh4/rapids-env -c rapidsai -c nvidia -c conda-forge \
+-c defaults rapids=0.12 python=3.6 cudatoolkit=10.1
 ```
 
 After the installation one can recover space by deleting the index cache, lock files, unused cache packages, and tarballs:
@@ -74,6 +81,42 @@ $ exit
 ```
 
 See this [guide](https://rapidsai.github.io/projects/cudf/en/0.12.0/10min.html) for a 10-minute introduction to cuDF and Dask-cuDF.
+
+Submitting a job to the Slurm scheduler:
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=rapids        # create a short name for your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem=8G                 # total memory per node
+#SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
+#SBATCH --gres=gpu:tesla_v100:1
+
+module purge
+module load anaconda3
+conda activate /scratch/network/$USER/rapids-env
+
+python rapids.py
+```
+
+```python
+import cudf
+s = cudf.Series([1, 2, 3, None, 4])
+print(s)
+```
+
+The output is
+
+```
+0       1
+1       2
+2       3
+3    null
+4       4
+dtype: int64
+```
 
 ## Machine Learning Example
 
