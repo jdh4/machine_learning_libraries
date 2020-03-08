@@ -118,6 +118,59 @@ The output is
 dtype: int64
 ```
 
+## cuDF with Multiple GPUs
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=rapids        # create a short name for your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem=8G                 # total memory per node
+#SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
+#SBATCH --gres=gpu:tesla_v100:2
+
+module purge
+module load anaconda3
+conda activate /scratch/network/jdh4/rapids-env
+
+python rapids.py
+```
+
+```python
+import cudf
+import dask_cudf
+
+df = cudf.DataFrame({'a':list(range(20, 40)), 'b':list(range(20))})
+
+ddf = dask_cudf.from_cudf(df, npartitions=2)
+print(ddf.compute())
+```
+
+```
+     a   b
+0   20   0
+1   21   1
+2   22   2
+3   23   3
+4   24   4
+5   25   5
+6   26   6
+7   27   7
+8   28   8
+9   29   9
+10  30  10
+11  31  11
+12  32  12
+13  33  13
+14  34  14
+15  35  15
+16  36  16
+17  37  17
+18  38  18
+19  39  19
+```
+
 ## Machine Learning Example
 
 ```bash
