@@ -4,7 +4,7 @@ Built based on the Apache Arrow columnar memory format, cuDF is a GPU DataFrame 
 
 cuDF provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
 
-![nvidia_rapids](https://github.com/rapidsai/cudf/blob/branch-0.13/img/rapids_arrow.png)
+<p align="center"><img src="https://github.com/rapidsai/cudf/blob/branch-0.13/img/rapids_arrow.png" width="80%"/></p>
 
 [Getting started](https://rapids.ai/start.html)
 
