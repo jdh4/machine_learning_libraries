@@ -47,7 +47,7 @@ If you are new to Spark then start by running this simple example:
 
 ```bash
 $ ssh <YourNetID>@adroit.princeton.edu
-$ cd /scratch/netword/<YourNetID>  # /scratch/gpfs/ on other clusters
+$ cd /scratch/network/<YourNetID>  # /scratch/gpfs/ on other clusters
 $ git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop
 $ cd hpc_beginning_workshop/RC_example_jobs/spark_big_data
 $ wget https://raw.githubusercontent.com/apache/spark/master/examples/src/main/python/pi.py
