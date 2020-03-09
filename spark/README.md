@@ -1,8 +1,8 @@
 # Spark
 
-Spark is big data processing engine with modules for streaming, SQL, graphs, machine learning and more. Its greatest utility is that the parallelization and processing of the data is automatically handled. The are four different Spark API languages: Scala, Python, Java and R.
+Spark is big data processing engine with specialized components for streaming, SQL, graphs, machine learning and more. Its greatest utility is that the parallelization and processing of the data is automatically handled. The are four different Spark API languages: Scala, Python, Java and R.
 
-- The basic idea is to store the data in a DataFrame which is distributed over many nodes. The underlying data structure is the resilent distributed datasets (RDD).  Think of an RDD of a list of objects.
+- The basic idea is to store the data in a DataFrame which is distributed over many nodes. The underlying data structure is the resilent distributed datasets (RDD). Think of an RDD of a list of objects.
 
 - Lazy evaluation is used. Operations in the Spark script which transform an RDD are translated to a node in the computation graph. Actions cause the graph to be evaluated. Intermediate results can be cached in memory and/or disk.
 
