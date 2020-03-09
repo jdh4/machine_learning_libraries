@@ -13,7 +13,7 @@ Spark 2.2 is available on the Princeton HPC clusters. See the [Python API](https
 The session below illustrates how to create a simple DataFrame in the PySpark shell during an interactve session:
 
 ```bash
-$ ssh della  # or another cluster
+$ ssh adroit  # or another cluster
 $ salloc --nodes=1 --ntasks=1 --time=10
 $ module load anaconda3 spark/hadoop2.7/2.2.0
 $ spark-start
