@@ -37,7 +37,7 @@ $ conda activate torch-env
 $ pip install <package-a> <package-b> ... <package-M>
 ```
 
-You [should not](https://www.anaconda.com/using-pip-in-a-conda-environment/) do additional conda installs after the pip install.
+You [should not](https://www.anaconda.com/using-pip-in-a-conda-environment/) do additional conda installs after the pip install. In your script, you should import your conda-installed modules before the pip-installed ones (since you may get a mixing of libstdc++ versions otherwise).
 
 When in doubt make a new environment.
 
