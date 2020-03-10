@@ -1,5 +1,39 @@
 # PyTorch
 
+An Aside on Installing Python Packages
+
+```
+module load anaconda3
+conda create --name myenv <package-1> <package-2> ... <package-N>
+conda activate torch-env
+```
+
+```
+module load anaconda3
+conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge
+conda activate torch-env
+```
+
+```
+module load anaconda3
+conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge --channel <channel>
+conda activate torch-env
+```
+
+```
+module load anaconda3
+conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge --channel <channel>
+conda activate torch-env
+pip install <package-a> <package-b> ... <package-M>
+```
+
+
+```
+$ module load anaconda3
+$ conda create --name torch-env pytorch torchvision cudatoolkit=10.1 matplotlib --channel pytorch
+$ conda activate torch-env
+```
+
 Please see [https://github.com/PrincetonUniversity/install_pytorch](https://github.com/PrincetonUniversity/install_pytorch).
 
 ```
