@@ -6,48 +6,38 @@ Anaconda maintains roughly 700 popular packages for scientfic computing and data
 
 A good starting point for installing scientific software is try :
 
-```bash
-module load anaconda3
-conda create --name myenv <package-1> <package-2> ... <package-N>
-conda activate torch-env
+```
+$ module load anaconda3
+$ conda create --name myenv <package-1> <package-2> ... <package-N>
+$ conda activate torch-env
 ```
 
 In the above case, the implied channel is `anaconda`. If one or more packages are not found then try also looking in the community channel `conda-forge`:
 
-```bash
-module load anaconda3
-conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge
-conda activate torch-env
+```
+$ module load anaconda3
+$ conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge
+$ conda activate torch-env
 ```
 
 If still no luck then try adding a specialized channel that you have knowledge of:
 
-```bash
-module load anaconda3
-conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge --channel <channel>
-conda activate torch-env
+```
+$ module load anaconda3
+$ conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge --channel <channel>
+$ conda activate torch-env
 ```
 
 In the above, `<channel>` corresponds to a special channel like `bioconda`, `r`, `intel`, `pytorch`, etc. Lastly, if packages are not found via conda then turn to pip:
-
-```bash
-module load anaconda3
-conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge --channel <channel>
-conda activate torch-env
-pip install <package-a> <package-b> ... <package-M>
-```
-
-NEVER do the following:
 
 ```
 $ module load anaconda3
 $ conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge --channel <channel>
 $ conda activate torch-env
 $ pip install <package-a> <package-b> ... <package-M>
-$ conda install <package-alpha> <package-beata>
 ```
 
-And NEVER try to mix conda and virtualenv.
+You [should not](https://www.anaconda.com/using-pip-in-a-conda-environment/) do additional conda installs after the pip install.
 
 When in doubt make a new environment.
 
