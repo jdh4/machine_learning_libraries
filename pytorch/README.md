@@ -1,31 +1,76 @@
 # PyTorch
 
-An Aside on Installing Python Packages
+## An Aside on Installing Python Packages
 
-```
+```bash
 module load anaconda3
 conda create --name myenv <package-1> <package-2> ... <package-N>
 conda activate torch-env
 ```
 
-```
+```bash
 module load anaconda3
 conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge
 conda activate torch-env
 ```
 
-```
+```bash
 module load anaconda3
 conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge --channel <channel>
 conda activate torch-env
 ```
 
-```
+In the above, `<channel>` corresponds to a special channel like `intel`, `bioconda`, `pytorch`, etc.
+
+
+```bash
 module load anaconda3
 conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge --channel <channel>
 conda activate torch-env
 pip install <package-a> <package-b> ... <package-M>
 ```
+
+NEVER do the following:
+
+```
+$ module load anaconda3
+$ conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge --channel <channel>
+$ conda activate torch-env
+$ pip install <package-a> <package-b> ... <package-M>
+$ conda install <package-aphla> <package-beata>
+```
+
+And NEVER try to mix conda and virtualenv.
+
+
+## An Aside of Where to Store Your Conda Packages and Environments
+
+You can request more space in `/home/<YourNetID>` for installing software but because Conda environment are easy to remake we will do the installation on `/scratch/network/<YourNetID>`. Note that this filesystem is not backed up but it provides a vast amount of space (100 GB by default).
+
+```bash
+$ ssh adroit
+$ cd
+$ vim .condarc
+```
+
+Edit your file as follows:
+
+```
+pkgs_dirs:
+ - /scratch/network/<YourNetID>/conda-pkgs
+envs_dirs:
+ - /scratch/network/<YourNetID>/conda-envs
+```
+
+Check that it is correct with:
+
+```bash
+$ module load anaconda3
+$ conda config --show
+```
+
+
+
 
 
 ```
