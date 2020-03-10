@@ -14,7 +14,7 @@ A good starting point for installing scientific software is try :
 ```
 $ module load anaconda3
 $ conda create --name myenv <package-1> <package-2> ... <package-N>
-$ conda activate torch-env
+$ conda activate myenv
 ```
 
 In the above case, the implied channel is `anaconda`. If one or more packages are not found then try also looking in the community channel `conda-forge`:
@@ -22,7 +22,7 @@ In the above case, the implied channel is `anaconda`. If one or more packages ar
 ```
 $ module load anaconda3
 $ conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge
-$ conda activate torch-env
+$ conda activate myenv
 ```
 
 If still no luck then try adding a specialized channel that you have knowledge of:
@@ -30,7 +30,7 @@ If still no luck then try adding a specialized channel that you have knowledge o
 ```
 $ module load anaconda3
 $ conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge --channel <channel>
-$ conda activate torch-env
+$ conda activate myenv
 ```
 
 In the above, `<channel>` corresponds to a special channel like `bioconda`, `r`, `intel`, `pytorch`, etc. Lastly, if packages are not found via conda then turn to pip:
@@ -38,7 +38,7 @@ In the above, `<channel>` corresponds to a special channel like `bioconda`, `r`,
 ```
 $ module load anaconda3
 $ conda create --name myenv <package-1> <package-2> ... <package-N> --channel conda-forge --channel <channel>
-$ conda activate torch-env
+$ conda activate myenv
 $ pip install <package-a> <package-b> ... <package-M>
 ```
 
