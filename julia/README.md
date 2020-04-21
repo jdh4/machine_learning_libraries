@@ -113,6 +113,8 @@ Float32[2.0, 4.0, 6.0]
 Float32[-0.835879, 0.3685953, 1.0108142, -0.29181987, 0.31272212]
 ```
 
+The GPU version ran about 2.6x faster than the CPU version.
+
 Note that there are no GPUs on the head node of TigerGPU and no internet connection on the compute nodes. To run MNIST for example you will need to download the data first.
 
 ## Knet
