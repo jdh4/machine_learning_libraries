@@ -208,6 +208,17 @@ CPU times: user 198 ms, sys: 105 ms, total: 303 ms
 Wall time: 304 ms
 ```
 
+## Traverse
+
+cuDF and cuML are available on the IBM conda channel. You can make an environment like this:
+
+```
+ssh traverse
+module load anaconda3
+conda create --name rapids-env --channel https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda cudf cuml
+# accept the license agreement
+```
+
 ## Useful Links
 
 [Example Notebooks](https://github.com/rapidsai/notebooks)  
