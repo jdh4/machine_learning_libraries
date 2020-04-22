@@ -219,6 +219,8 @@ conda create --name rapids-env --channel https://public.dhe.ibm.com/ibmdl/export
 # accept the license agreement
 ```
 
+There are also dask-based packages available like dask-cudf.
+
 ## Useful Links
 
 [Example Notebooks](https://github.com/rapidsai/notebooks)  
