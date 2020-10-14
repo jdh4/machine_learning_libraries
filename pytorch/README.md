@@ -5,6 +5,11 @@
 [PyTorch at Princeton](https://github.com/PrincetonUniversity/install_pytorch)
 
 
+```
+$ ssh tigergpu
+$ singularity pull docker://nvcr.io/nvidia/pytorch:20.09-py3
+```
+
 ## An Aside on Installing Python Packages
 
 Anaconda maintains roughly 700 popular packages for scientfic computing and data science. Try building your environment from Anaconda Cloud:
