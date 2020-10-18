@@ -10,6 +10,22 @@ $ ssh tigergpu
 $ singularity pull docker://nvcr.io/nvidia/pytorch:20.09-py3
 ```
 
+```
+1 core, 1 gpu: 45 s
+4 core, 1 gpu: 15 s
+4 core, 2 gpu: 20 s
+4 core, 2 gpu: 21 s
+8 core, 2 gpu: 16 s
+16 cor, 2 gpu: 18 s
+1 core, 2 gpu: 42 s
+4 core, 2 gpu: 19 s
+4 core, 1 gpu: 15 s
+8 core, 1 gpu: 17 s (num_workers=2)
+8 core, 1 gpu: 11 s (num_workers=4)
+8 core, 1 gpu: 10 s
+8 core, 1 gpu: 11 s (num_workers=12)
+```
+
 ## An Aside on Installing Python Packages
 
 Anaconda maintains roughly 700 popular packages for scientfic computing and data science. Try building your environment from Anaconda Cloud:
