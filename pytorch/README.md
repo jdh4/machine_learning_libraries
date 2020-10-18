@@ -24,6 +24,10 @@ $ singularity pull docker://nvcr.io/nvidia/pytorch:20.09-py3
 8 core, 1 gpu: 11 s (num_workers=4)
 8 core, 1 gpu: 10 s
 8 core, 1 gpu: 11 s (num_workers=12)
+4 core, 2 gpu: 17 s (num_workers=4, batch=128)
+8 core, 2 gpu: 12 s (num_workers=8, batch=128)
+16 cor, 2 gpu: 12 s (num_workers=8, batch=128)
+16 cor, 2 gpu: 13 s (num_worker=12, batch=128)
 ```
 
 ## An Aside on Installing Python Packages
