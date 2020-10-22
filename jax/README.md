@@ -1,7 +1,5 @@
 # JAX
 
-## About
-
 [JAX](https://github.com/google/jax) is [Autograd](https://github.com/hips/autograd) and [XLA](https://www.tensorflow.org/xla), brought
 together for high-performance machine learning research.
 
