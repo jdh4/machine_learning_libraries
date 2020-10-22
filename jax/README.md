@@ -16,6 +16,8 @@ $ module load anaconda3
 $ conda create --name jax-cpu --channel conda-forge --override-channels jax "libblas=*=*mkl"
 ```
 
+Try increasing `cpus-per-task` to take advantage of parallelism.
+
 ### GPU (TigerGPU, Traverse, Adroit)
 
 JAX must be built from source to use on the GPU clusters as [described here](https://jax.readthedocs.io/en/latest/developer.html). Below is the build procedure for TigerGPU (for Traverse and Adroit see notes below):
