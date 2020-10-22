@@ -1,7 +1,4 @@
 #!/bin/bash
-mkdir -p $HOME/software  # or another directory
-cd $HOME/software
-
 module load anaconda3/2020.7
 pip install --user virtualenv
 mkdir jax-gpu
@@ -16,7 +13,6 @@ python build/build.py --enable_cuda --cuda_path /usr/local/cuda-11.0 \
                       --cudnn_path /usr/local/cudnn/cuda-11.0/8.0.2 \
                       --cuda_compute_capabilities 6.0 \
                       --enable_march_native --enable_mkl_dnn
-
 pip install -e build
 pip install -e .
 
