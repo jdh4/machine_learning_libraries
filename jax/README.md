@@ -18,12 +18,13 @@ $ conda create --name jax-cpu --channel conda-forge --override-channels jax "lib
 
 ### GPU (TigerGPU, Traverse, Adroit)
 
-JAX must be built from source to use on the GPU clusters:
+JAX must be built from source to use on the GPU clusters as [described here](https://jax.readthedocs.io/en/latest/developer.html). Below is the build procedure for TigerGPU (for Traverse and Adroit see notes below):
 
-```
-$ ssh <YourNetID>@tigergpu.princeton.edu  # or adroit
+$ ssh <YourNetID>@tigergpu.princeton.edu
 $ cd software  # or another directory
-$ git clone https://github.com/google/jax
+$ wget https://github.com/google/jax/archive/jaxlib-v0.1.55.tar.gz  # check for a newer release
+$ tar zxf jaxlib-v0.1.55.tar.gz
+$ cd jax-jaxlib-v0.1.55
 $ cd jax
 $ module load anaconda3/2019.10 cudatoolkit/10.1 cudnn/cuda-10.1/7.6.3 rh/devtoolset/8
 $ conda create --name jax-gpu python=3.7 numpy scipy cython six
@@ -32,6 +33,16 @@ $ python build/build.py --enable_cuda --cudnn_path /usr/local/cudnn/cuda-10.1/7.
 $ pip install -e build
 $ pip install -e .
 ```
+
+For Traverse and Adroit, use `--cuda_compute_capabilities 7.0` instead of 6.0.
+
+If you do a pip install on TigerGPU then you will encounter the following error when you try to import jax:
+
+```
+ImportError: /lib64/libm.so.6: version `GLIBC_2.23' not found
+```
+
+Follow the directions above to build from source.
 
 ## Example Job
 
