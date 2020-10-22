@@ -29,9 +29,9 @@ $ wget
 $ bash install_jax_tigergpu.sh | tee jax.log
 ```
 
-For Traverse and Adroit, use `--cuda_compute_capabilities 7.0` instead of 6.0.
+For Traverse and Adroit, use `--cuda_compute_capabilities 7.0` instead of 6.0. You also may need to use different modules. On Adroit use `#SBATCH --gres=gpu:tesla_v100:1`.
 
-If you do a pip install on TigerGPU then you will encounter the following error when you try to import jax:
+If you do a pip install instead of building from source on TigerGPU then you will encounter the following error when you try to import jax:
 
 ```
 ImportError: /lib64/libm.so.6: version `GLIBC_2.23' not found
