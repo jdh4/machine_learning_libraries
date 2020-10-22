@@ -61,3 +61,17 @@ python mnist_classifier.py
 ```
 
 The example below is from `https://github.com/google/jax/blob/master/examples/mnist_classifier.py`.
+
+Next make the appropriate lines in the file `software/jax/examples/datasets.py` in the function `mnist_raw()` look like this:
+
+```
+#for filename in ["train-images-idx3-ubyte.gz", "train-labels-idx1-ubyte.gz",
+#                   "t10k-images-idx3-ubyte.gz", "t10k-labels-idx1-ubyte.gz"]:
+#    _download(base_url + filename, filename)
+ 
+  _DATA = os.getcwd() + "/data"
+  train_images = parse_images(path.join(_DATA, "train-images-idx3-ubyte.gz"))
+  train_labels = parse_labels(path.join(_DATA, "train-labels-idx1-ubyte.gz"))
+  test_images = parse_images(path.join(_DATA, "t10k-images-idx3-ubyte.gz"))
+  test_labels = parse_labels(path.join(_DATA, "t10k-labels-idx1-ubyte.gz"))
+```
