@@ -42,7 +42,20 @@ See [this page](https://researchcomputing.princeton.edu/python) for Slurm script
 ## Example Job
 
 ```
-#SBATCH --gres=gpu:1
-module load cudatoolkit/10.1 cudnn/cuda-10.1/7.6.3 anaconda3/2019.10
-conda activate jax-gpu
+#!/bin/bash
+#SBATCH --job-name=jax-gpu       # create a short name for your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G per cpu-core is default)
+#SBATCH --gres=gpu:1             # number of gpus per node
+#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=all          # send email when job begins, ends and fails
+#SBATCH --mail-user=<YourNetID>@princeton.edu
+
+module purge
+module load anaconda3/2020.7 cudatoolkit/11.0 cudnn/cuda-11.0/8.0.2
+source $HOME/software/jax-gpu/bin/activate
+
+python myscript.py
 ```
