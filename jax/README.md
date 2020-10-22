@@ -57,7 +57,7 @@ module purge
 module load anaconda3/2020.7 cudatoolkit/11.0 cudnn/cuda-11.0/8.0.2
 source $HOME/software/jax-gpu/bin/activate
 
-python myscript.py
+python mnist_classifier.py
 ```
 
 The example below is from `https://github.com/google/jax/blob/master/examples/mnist_classifier.py`.
