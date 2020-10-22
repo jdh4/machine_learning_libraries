@@ -49,7 +49,7 @@ See [this page](https://researchcomputing.princeton.edu/python) for Slurm script
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G per cpu-core is default)
 #SBATCH --gres=gpu:1             # number of gpus per node
-#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=all          # send email when job begins, ends and fails
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
