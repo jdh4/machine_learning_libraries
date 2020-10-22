@@ -1,5 +1,7 @@
 # JAX
 
+<img src="https://raw.githubusercontent.com/google/jax/master/images/jax_logo_250px.png" alt="logo"></img>
+
 [JAX](https://github.com/google/jax) is [Autograd](https://github.com/hips/autograd) and [XLA](https://www.tensorflow.org/xla), brought
 together for high-performance machine learning research.
 
