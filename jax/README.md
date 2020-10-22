@@ -14,7 +14,7 @@ $ module load anaconda3
 $ conda create --name jax-cpu --channel conda-forge --override-channels jax "libblas=*=*mkl"
 ```
 
-Try increasing `cpus-per-task` to take advantage of parallelism.
+See [this page](https://researchcomputing.princeton.edu/python) for Slurm scripts. Be sure to take advantage of the parallelism of the CPU version which uses MKL and OpenMP. For the MNIST example, one finds as `cpus-per-task` increases from 1, 2, 4, the run time decreases as 139 s, 87 s, 58 s.
 
 ### GPU (TigerGPU, Traverse, Adroit)
 
