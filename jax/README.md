@@ -25,16 +25,8 @@ JAX must be built from source to use on the GPU clusters as [described here](htt
 ```
 $ ssh <YourNetID>@tigergpu.princeton.edu
 $ cd software  # or another directory
-$ wget https://github.com/google/jax/archive/jaxlib-v0.1.55.tar.gz  # check for a newer release
-$ tar zxf jaxlib-v0.1.55.tar.gz
-$ cd jax-jaxlib-v0.1.55
-$ cd jax
-$ module load anaconda3/2019.10 cudatoolkit/10.1 cudnn/cuda-10.1/7.6.3 rh/devtoolset/8
-$ conda create --name jax-gpu python=3.7 numpy scipy cython six
-$ conda activate jax-gpu
-$ python build/build.py --enable_cuda --cudnn_path /usr/local/cudnn/cuda-10.1/7.6.3 --enable_march_native --enable_mkl_dnn
-$ pip install -e build
-$ pip install -e .
+$ wget
+$ bash install_jax_tigergpu.sh | tee jax.log
 ```
 
 For Traverse and Adroit, use `--cuda_compute_capabilities 7.0` instead of 6.0.
