@@ -20,6 +20,7 @@ $ conda create --name jax-cpu --channel conda-forge --override-channels jax "lib
 
 JAX must be built from source to use on the GPU clusters as [described here](https://jax.readthedocs.io/en/latest/developer.html). Below is the build procedure for TigerGPU (for Traverse and Adroit see notes below):
 
+```
 $ ssh <YourNetID>@tigergpu.princeton.edu
 $ cd software  # or another directory
 $ wget https://github.com/google/jax/archive/jaxlib-v0.1.55.tar.gz  # check for a newer release
