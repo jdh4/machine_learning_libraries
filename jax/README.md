@@ -62,6 +62,10 @@ python mnist_classifier.py
 
 The example below is from `https://github.com/google/jax/blob/master/examples/mnist_classifier.py`.
 
+```
+$ wget https://raw.githubusercontent.com/google/jax/master/examples/mnist_classifier.py
+```
+
 Next make the appropriate lines in the file `software/jax/examples/datasets.py` in the function `mnist_raw()` look like this:
 
 ```python
