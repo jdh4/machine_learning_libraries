@@ -39,6 +39,13 @@ $ conda create --name jax-cpu --channel conda-forge --override-channels jax "lib
 
 See [this page](https://researchcomputing.princeton.edu/python) for Slurm scripts. Be sure to take advantage of the parallelism of the CPU version which uses MKL and OpenMP. For the MNIST example, one finds as `cpus-per-task` increases from 1, 2, 4, the run time decreases as 139 s, 87 s, 58 s.
 
+```
+$ cd /scratch/gpfs/<YourNetID>
+$ mkdir myjob && cd myjob
+$ wget https://raw.githubusercontent.com/jdh4/machine_learning_libraries/master/jax/download_mnist.py
+$ python3 download_mnist.py
+```
+
 ## Example Job for GPU Version
 
 ```
