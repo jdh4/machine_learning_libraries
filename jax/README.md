@@ -64,7 +64,7 @@ The example below is from `https://github.com/google/jax/blob/master/examples/mn
 
 Next make the appropriate lines in the file `software/jax/examples/datasets.py` in the function `mnist_raw()` look like this:
 
-```
+```python
 #for filename in ["train-images-idx3-ubyte.gz", "train-labels-idx1-ubyte.gz",
 #                   "t10k-images-idx3-ubyte.gz", "t10k-labels-idx1-ubyte.gz"]:
 #    _download(base_url + filename, filename)
