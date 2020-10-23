@@ -1,9 +1,7 @@
-import os
-from os import path
+from os import getcwd, path
 import urllib.request
 
-_DATA=os.getcwd() + "/data"
-print(_DATA)
+_DATA = getcwd() + "/data"
 base_url = "https://storage.googleapis.com/cvdf-datasets/mnist/"
 
 def _download(url, filename):
