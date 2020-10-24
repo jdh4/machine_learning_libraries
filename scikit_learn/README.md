@@ -12,6 +12,8 @@ For an introduction to machine learning and Scikit-learn see this GitHub [repo a
 
 ## Installation
 
+### Anaconda
+
 Scikit-learn is pre-installed as part of the Anaconda Python disribution:
 
 ```
@@ -30,6 +32,15 @@ $ conda create --name sklearn-env --channel <some-channel> scikit-learn pandas m
 ```
 
 See [this page](https://researchcomputing.princeton.edu/python) for on creating Conda environments for Python packages and writing Slurm scripts.
+
+### Intel
+
+Intel provides their own distribution of Python as well as acceleration libraries for Scikit-learn such as DAAL. You may consider creating your Scikit-learn environment using packages from the `intel` channel:
+
+```
+$ module load anaconda3/2020.7
+$ conda create --name sklearn-env --channel intel scikit-learn pandas matplotlib
+```
 
 ## Multithreading
 
