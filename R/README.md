@@ -56,7 +56,7 @@ Submit the job:
 
 ```
 $ cd intro_ml_libs/R/myjob
-$ wget data
+$ wget https://raw.githubusercontent.com/PacktPublishing/Machine-Learning-with-R-Third-Edition/master/Chapter05/credit.csv
 $ sbatch job.slurm
 ```
 
