@@ -22,6 +22,31 @@ Below is the R script:
 
 ```R
 library(caret)
+credit <- read.csv("credit.csv")
+system.time(train(default ~ ., data = credit, method="rf"))
+
+cpucores <- as.numeric(Sys.getenv("SLURM_CPUS_PER_TASK"))
+library(doParallel)
+registerDoParallel(cores=cpucores)
+system.time(train(default ~ ., data = credit, method="rf"))
+```
+
+Below is an appropriate Slurm script:
+
+```
+#!/bin/bash
+#SBATCH --job-name=myjob         # create a short name for your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=4        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G per cpu-core is default)
+#SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin        # send mail when job begins
+#SBATCH --mail-type=end          # send mail when job ends
+#SBATCH --mail-user=<YourNetID>@princeton.edu
+
+module purge
+Rscript demo.R
 ```
 
 Now submit the job:
@@ -33,6 +58,20 @@ $ sbatch job.slurm
 ```
 
 The output should be:
+
+```
+Loading required package: lattice
+Loading required package: ggplot2
+   user  system elapsed 
+102.538   0.461 103.014 
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+   user  system elapsed 
+104.860   1.395  29.412
+```
+
+The serial training requires 103.0 seconds while when four CPU-cores are used the parallel the time is reduced to 29.4 seconds.
 
 ## R and Deep Learning
 
