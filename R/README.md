@@ -23,8 +23,11 @@ Below is the R script:
 ```R
 library(caret)
 credit <- read.csv("credit.csv")
+
+# train in serial
 system.time(train(default ~ ., data = credit, method="rf"))
 
+# train in parallel
 cpucores <- as.numeric(Sys.getenv("SLURM_CPUS_PER_TASK"))
 library(doParallel)
 registerDoParallel(cores=cpucores)
