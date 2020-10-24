@@ -28,3 +28,22 @@ $ module load anaconda3/2020.7
 '0.23.1'
 ```
 
+If you need additional packages that are not found in the Anaconda distribution then make your own Conda environment:
+
+```
+$ module load anaconda3/2020.7
+$ conda create --name sklearn-env scikit-learn matplotlib <another-package>
+```
+
+See [this page](https://researchcomputing.princeton.edu/python) for on creating Conda environments for Python packages and writing Slurm scripts.
+
+## Multithreading
+
+Hyperparameter tuning and cross validation
+
+`n_jobs=-1`
+
+## XGB
+
+## Intel Python Distribution
+
