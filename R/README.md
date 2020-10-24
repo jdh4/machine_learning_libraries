@@ -71,7 +71,7 @@ Loading required package: parallel
 104.860   1.395  29.412
 ```
 
-The serial training requires 103.0 seconds while when four CPU-cores are used the parallel the time is reduced to 29.4 seconds.
+The serial training requires 103.0 seconds while when four CPU-cores are used in parallel the time is reduced to 29.4 seconds.
 
 ## R and Deep Learning
 
