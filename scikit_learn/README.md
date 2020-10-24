@@ -14,3 +14,16 @@ For an introduction to machine learning and Scikit-learn see this GitHub [repo a
 GPU with XGB (external model)
 
 Intel Python distribution
+
+## Installation
+
+Scikit-learn is pre-installed as part of the Anaconda Python disribution:
+
+```
+$ module load anaconda3/2020.7
+(base) $ python
+>>> import sklearn
+>>> sklearn.__version__
+'0.23.1'
+```
+
