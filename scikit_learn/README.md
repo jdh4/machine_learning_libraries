@@ -1,6 +1,6 @@
 # Scikit-learn
 
-[Scikit-learn](https://scikit-learn.org/stable/) is a Python library for machine learning:
+[Scikit-learn](https://scikit-learn.org/stable/) is a Python library for machine learning featuring:
 
 + Conventional models (not a deep learning library)
 + Comfortable to use (elegant ML pipelines)
