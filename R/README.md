@@ -75,7 +75,7 @@ Loading required package: parallel
 104.860   1.395  29.412
 ```
 
-We see that serial training requires 103.0 seconds while when four CPU-cores are used in parallel the time is reduced to 29.4 seconds. An RF model is composed of many independent decision trees. In this case the speed-up arises from the trees being trained in parallel.
+We see that serial training requires 103 seconds while when four CPU-cores are used in parallel the time is reduced to 29 seconds. An RF model is composed of many independent decision trees. In this case the speed-up arises from the trees being trained in parallel.
 
 ## R and Deep Learning
 
