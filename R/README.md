@@ -11,10 +11,10 @@ See [this page](https://cran.r-project.org/web/views/MachineLearning.html) for a
 Install the needed packages:
 
 ```
-$ ssh adroit
+$ ssh <YourNetID>@adroit.princeton.edu
 $ module load rh/devtoolset/8
 $ R
-> install.packages("caret")
+> install.packages(c("caret", "doParallel"))
 > q()
 ```
 
@@ -31,7 +31,7 @@ registerDoParallel(cores=cpucores)
 system.time(train(default ~ ., data = credit, method="rf"))
 ```
 
-Below is an appropriate Slurm script:
+Below is an appropriate Slurm script that takes advantage of the parallelism offered by `caret`:
 
 ```
 #!/bin/bash
@@ -49,7 +49,7 @@ module purge
 Rscript demo.R
 ```
 
-Now submit the job:
+Submit the job:
 
 ```
 $ cd intro_ml_libs/R/myjob
@@ -57,9 +57,10 @@ $ wget data
 $ sbatch job.slurm
 ```
 
-The output should be:
+When the job completes the output will be:
 
 ```
+$ cat slurm-xxxxxx.out
 Loading required package: lattice
 Loading required package: ggplot2
    user  system elapsed 
@@ -71,7 +72,7 @@ Loading required package: parallel
 104.860   1.395  29.412
 ```
 
-The serial training requires 103.0 seconds while when four CPU-cores are used in parallel the time is reduced to 29.4 seconds.
+We see that serial training requires 103.0 seconds while when four CPU-cores are used in parallel the time is reduced to 29.4 seconds. An RF model is composed of many independent decision trees. In this case the speed-up arises from the trees being trained in parallel.
 
 ## R and Deep Learning
 
