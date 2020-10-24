@@ -68,7 +68,9 @@ conda activate sklearn-env
 python myscript.py
 ```
 
-## XGB
+## Example Job
 
-## Intel Python Distribution
+
+
+## XGB and GPUs
 
