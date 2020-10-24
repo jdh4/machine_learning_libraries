@@ -44,9 +44,9 @@ $ conda create --name sklearn-env --channel intel scikit-learn pandas matplotlib
 
 ## Multithreading
 
-Hyperparameter tuning and cross validation
+Scikit-learn depends on the `intel-openmp` package which enabling multithreading. This allows the software to use multiple CPU-cores for hyperparameter tuning, cross validation and other embarrassingly parallel operations. If you are calling a routine that takes the `n_jobs` parameter then set this to `n_jobs=-1` to take advantage of all the CPU-cores in your Slurm allocation.
 
-`n_jobs=-1`
+Below is an appropriate Slurm script for a Scikit-learn job that takes advantage of multithreading:
 
 ```
 #!/bin/bash
@@ -58,6 +58,8 @@ Hyperparameter tuning and cross validation
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=all          # send email when job begins, ends and fails
 #SBATCH --mail-user=<YourNetID>@princeton.edu
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module purge
 module load anaconda3/2020.7
