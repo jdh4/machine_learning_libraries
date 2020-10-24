@@ -57,12 +57,11 @@ $ python3 download_mnist.py
 #SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G per cpu-core is default)
 #SBATCH --gres=gpu:1             # number of gpus per node
 #SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
-#SBATCH --mail-type=all          # send email when job begins, ends and fails
-#SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load anaconda3/2020.7 cudatoolkit/11.0 cudnn/cuda-11.0/8.0.2
-source $HOME/software/jax-gpu/bin/activate
+module load anaconda3/2020.7 cudatoolkit/10.2 cudnn/cuda-10.2/7.6.5
+conda activate jax-gpu
+export XLA_FLAGS=--xla_gpu_cuda_data_dir=/usr/local/cuda-10.2
 
 python mnist_classifier.py
 ```
