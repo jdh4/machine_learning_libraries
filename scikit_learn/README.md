@@ -1,7 +1,15 @@
-# Scikit-Learn
+# Scikit-learn
 
-good documentation, no DL, hypertuning with multithreading, big data with taking all memory of a node, a good way to learn ML
+Scikit-learn is a Python library that feature the conventional machine learning models. It sp
+
++ Conventional models (not a deep learning library)
++ Multithreaded training and limited GPU support (XGB)
++ Excellent documentation (good way to prepare for interviews (ML engineer, data scientist)
+
+For an introduction to machine learning and Scikit-learn see this GitHub [repo and book](https://github.com/ageron/handson-ml2) by Aurelien Geron.
 
 [Website](https://scikit-learn.org/stable/)
 
 GPU with XGB (external model)
+
+Intel Python distribution
