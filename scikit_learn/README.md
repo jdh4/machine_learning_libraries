@@ -6,7 +6,7 @@
 + Comfortable to use (elegant ML pipelines)
 + Interoperable with Pandas
 + Single-node only with multithreading and limited GPU support (XGB)
-+ Excellent [documentation](https://scikit-learn.org/stable/user_guide.html) (good way to prepare for interviews (ML engineer, data scientist)
++ Excellent [documentation](https://scikit-learn.org/stable/user_guide.html) (good way to prepare for ML engineer and data scientist interviews)
 
 For an introduction to machine learning and Scikit-learn see this GitHub [repo and book](https://github.com/ageron/handson-ml2) by Aurelien Geron.
 
