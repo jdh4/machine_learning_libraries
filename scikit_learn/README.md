@@ -31,7 +31,7 @@ $ module load anaconda3/2020.7
 $ conda create --name sklearn-env --channel <some-channel> scikit-learn pandas matplotlib <another-package>
 ```
 
-See [this page](https://researchcomputing.princeton.edu/python) for on creating Conda environments for Python packages and writing Slurm scripts.
+See [this page](https://researchcomputing.princeton.edu/python) for more on creating Conda environments for Python packages and writing Slurm scripts.
 
 ### Intel
 
