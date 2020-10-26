@@ -14,13 +14,20 @@ See the [documentation](https://ibmsoe.github.io/snap-ml-doc/v1.6.0/index.html) 
 
 ### Traverse
 
-```
-$ conda create --name pai4sk-env --channel https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda pai4sk scikit-learn
-```
+`pai4sk` is an interface that provides the full functionality of sklearn (for what it supports):
 
 ```
 $ module load anaconda3/2020.7
-$ conda create --name snap-env --channel https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda-early-access snapml
+$ CHNL="https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda"
+$ conda create --name pai4sk-env --channel ${CHNL} pai4sk scikit-learn
+```
+
+One can also install only `snapml`:
+
+```
+$ module load anaconda3/2020.7
+$ CHNL="https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda-early-access"
+$ conda create --name snap-env --channel ${CHNL} snapml scikit-learn
 ```
 
 ### TigerGPU, Adroit
@@ -29,10 +36,13 @@ Only the Spark interface is available for the `x86_64` architecture:
 
 ```
 $ module load anaconda3/2020.7
-$ conda create --name snap-env --channel https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda snapml-spark
+$ CHNL="https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda"
+$ conda create --name snap-env --channel ${CHML} snapml-spark
 ```
 
 ## Example Job
+
+The following job was ran on Traverse:
 
 ```python
 from pai4sk import RandomForestClassifier as SnapForest
