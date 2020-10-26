@@ -81,6 +81,8 @@ We see that serial training requires 103 seconds while when four CPU-cores are u
 
 [documentation](https://xgboost.readthedocs.io/en/latest/R-package/index.html)
 
+[GPU support](https://xgboost.readthedocs.io/en/latest/build.html#installing-r-package-with-gpu-support) is also available for XGBoost.
+
 ## R and Deep Learning
 
 [MXNet](https://mxnet.apache.org/api/r)
