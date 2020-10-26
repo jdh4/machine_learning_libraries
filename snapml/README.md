@@ -1,6 +1,6 @@
 # Snap ML
 
-[Snap ML](https://www.zurich.ibm.com/snapml/) is a machine learning library which supports the conventional models:
+[Snap ML](https://www.zurich.ibm.com/snapml/) is a GPU-enabled machine learning library:
 
 + Developed by IBM
 + Conventional models (GLM and trees)
