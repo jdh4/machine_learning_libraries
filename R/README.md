@@ -77,6 +77,10 @@ Loading required package: parallel
 
 We see that serial training requires 103 seconds while when four CPU-cores are used in parallel the time is reduced to 29 seconds. An RF model is composed of many independent decision trees. In this case the speed-up arises from the trees being trained in parallel.
 
+## XGBoost
+
+[documentation](https://xgboost.readthedocs.io/en/latest/R-package/index.html)
+
 ## R and Deep Learning
 
 [MXNet](https://mxnet.apache.org/api/r)
