@@ -76,5 +76,9 @@ python myscript.py
 Take a look at an end-to-end ML project [here](https://github.com/ageron/handson-ml2/blob/master/02_end_to_end_machine_learning_project.ipynb) for predicting housing prices in California.
 
 
-## XGB and GPUs
+## Gradient Boosting Models and GPUs
+
+[LightGBM](https://github.com/microsoft/LightGBM/tree/master/python-package)
+
+[XGBoost](https://xgboost.readthedocs.io/en/latest/)
 
