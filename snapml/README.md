@@ -2,7 +2,7 @@
 
 [Snap ML](https://www.zurich.ibm.com/snapml/) Integration with Spark
 
-See the [documentation](https://ibmsoe.github.io/snap-ml-doc/v1.6.0/index.html) (v1.6.0) and examples.
+See the [documentation](https://ibmsoe.github.io/snap-ml-doc/v1.6.0/index.html) (v1.6.0) and [tutorials](https://ibmsoe.github.io/snap-ml-doc/v1.6.0/tutorials.html).
 
 + Distributed training
 + GPU acceleration and supports sparse data structures
