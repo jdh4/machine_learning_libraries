@@ -1,12 +1,12 @@
 # Snap ML
 
-[Snap ML](https://www.zurich.ibm.com/snapml/) is a machine learning library:
+[Snap ML](https://www.zurich.ibm.com/snapml/) is a machine learning library which supports the conventional models:
 
 + Developed by IBM
-+ Distributed training
-+ GPU acceleration and supports sparse data structures
++ Conventional models (GLM and trees)
 + `sklearn` interface
-+ `snapml-spark` offers distributed training and integrates with PySpark but only offers three models (linear regression, logistic regression, linear support vector classifier (SVC)
++ GPU acceleration, distributed training and supports sparse data structures
++ `snapml-spark` offers distributed training and integrates with PySpark (linear regression, logistic regression, linear support vector classifier)
 
 See the [documentation](https://ibmsoe.github.io/snap-ml-doc/v1.6.0/index.html) (v1.6.0) and [tutorials](https://ibmsoe.github.io/snap-ml-doc/v1.6.0/tutorials.html).
 
