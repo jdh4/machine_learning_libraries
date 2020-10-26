@@ -80,5 +80,5 @@ Take a look at an end-to-end ML project [here](https://github.com/ageron/handson
 
 [LightGBM](https://github.com/microsoft/LightGBM/tree/master/python-package)
 
-[XGBoost](https://xgboost.readthedocs.io/en/latest/)
+[XGBoost](https://xgboost.readthedocs.io/en/latest/) and the Scikit-learn [interface](https://xgboost.readthedocs.io/en/latest/python/python_api.html#module-xgboost.sklearn).
 
