@@ -19,8 +19,6 @@ See this [guide](https://docs.rapids.ai/api/cudf/stable/) for a 10-minute introd
 
 <p align="center"><img src="https://github.com/rapidsai/cudf/blob/branch-0.13/img/rapids_arrow.png" width="80%"/></p>
 
-[Getting started](https://rapids.ai/start.html)
-
 ## Installation
 
 ### Adroit or Tiger
