@@ -10,9 +10,9 @@
 
 + See also `cuSignal`, `cuXFilter`, `cuSpatial` and more
 
-+ Spark 3.0 integrates with Rapids
-
 + Multiple GPUs can be used when lots of processing must be done or if more GPU memory is needed
+
++ Spark 3.0 integrates with Rapids
 
 See this [guide](https://docs.rapids.ai/api/cudf/stable/) for a 10-minute introduction to `cuDF` and `Dask-cuDF`.
 
