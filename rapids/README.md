@@ -36,6 +36,9 @@ $ module load anaconda3
 $ conda create -n rapids-0.16 -c rapidsai -c nvidia -c conda-forge -c defaults rapids=0.16 python=3.8 cudatoolkit=10.2
 ```
 
+There is also a container [here](https://hub.docker.com/r/rapidsai/rapidsai/).
+
+
 ### Traverse
 
 `cuDF` and `cuML` are available in the IBM WML-CE channel. You can make an environment like this:
@@ -76,6 +79,8 @@ dtype: int64
 $ exit
 ```
 
+Use `#SBATCH --gres=gpu:tesla_v100:1` on Adroit and `#SBATCH --gres=gpu:1` on Tiger.
+
 
 Submitting a job to the Slurm scheduler:
 
@@ -115,6 +120,18 @@ dtype: int64
 
 ## cuDF with Multiple GPUs
 
+```python
+import cudf
+import dask_cudf
+
+df = cudf.DataFrame({'a':list(range(20, 40)), 'b':list(range(20))})
+
+ddf = dask_cudf.from_cudf(df, npartitions=2)
+print(ddf.compute())
+```
+
+Below is an appropriate Slurm script:
+
 ```bash
 #!/bin/bash
 #SBATCH --job-name=rapids        # create a short name for your job
@@ -132,15 +149,9 @@ conda activate rapids-0.16
 python rapids.py
 ```
 
-```python
-import cudf
-import dask_cudf
+Use `#SBATCH --gres=gpu:tesla_v100:1` on Adroit and `#SBATCH --gres=gpu:1` on Tiger.
 
-df = cudf.DataFrame({'a':list(range(20, 40)), 'b':list(range(20))})
-
-ddf = dask_cudf.from_cudf(df, npartitions=2)
-print(ddf.compute())
-```
+Below is the output of this simple example:
 
 ```
      a   b
