@@ -166,9 +166,9 @@ print(ddf.compute())
 19  39  19
 ```
 
-## Machine Learning Example
+## Machine Learning with cuML
 
-See this [guide](https://docs.rapids.ai/api/cuml/stable/) for an introduction to `cuML`.
+See the [documentation](https://docs.rapids.ai/api/cuml/stable/) for `cuML` and example Jupyter [notebooks](https://github.com/rapidsai/cuml/tree/branch-0.17/notebooks).
 
 Follow the commands below to run a simple example on Adroit:
 
@@ -209,5 +209,4 @@ Wall time: 304 ms
 
 ## Useful Links
 
-[Example Notebooks](https://github.com/rapidsai/notebooks)  
 [NVIDIA Rapids on GitHub](https://github.com/rapidsai)
