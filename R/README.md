@@ -1,6 +1,6 @@
 # R
 
-R is programming language popular in the statistical sciences. There are 19000 packages on CRAN.
+R is programming language popular in the statistical sciences. There are 19000 packages on CRAN. Here is a list of [ML packages](https://cran.r-project.org/web/views/MachineLearning.html).
 
 For using R on the HPC clusters: [https://researchcomputing.princeton.edu/R](https://researchcomputing.princeton.edu/R)
 
