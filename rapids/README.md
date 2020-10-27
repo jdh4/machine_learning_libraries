@@ -38,18 +38,20 @@ $ module load anaconda3
 $ conda config --show
 ```
 
-Now perform the installation by copying and pasting the following two lines:
-
-```
-$ conda create --prefix /scratch/network/$USER/rapids-env -c rapidsai -c nvidia -c conda-forge \
--c defaults cuml=0.12 python=3.7 cudatoolkit=10.0
-```
-
-Or install all components including dask-cudf:
+Install `cuml` and its dependencies `cudf` and `dask-cudf`:
 
 ```bash
-$ conda create --prefix /scratch/network/jdh4/rapids-env -c rapidsai -c nvidia -c conda-forge \
--c defaults rapids=0.12 python=3.6 cudatoolkit=10.1
+# ~/.condarc should directing the install to /scratch/network or /scratch/gpfs
+$ module load anaconda3
+$ conda create -n rapids-0.16 -c rapidsai -c nvidia -c conda-forge -c defaults cuml=0.16 python=3.8 cudatoolkit=10.2
+```
+
+Or install all components of Rapids:
+
+```bash
+# ~/.condarc should directing the install to /scratch/network or /scratch/gpfs
+$ module load anaconda3
+$ conda create -n rapids-0.16 -c rapidsai -c nvidia -c conda-forge -c defaults rapids=0.16 python=3.8 cudatoolkit=10.2
 ```
 
 After the installation one can recover space by deleting the index cache, lock files, unused cache packages, and tarballs:
