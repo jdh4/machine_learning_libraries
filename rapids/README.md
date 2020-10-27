@@ -19,7 +19,7 @@ For large datasets, these GPU-based implementations can complete 10-50x faster t
 Install `cuml` and its dependencies `cudf` and `dask-cudf`:
 
 ```bash
-# ~/.condarc should directing the install to /scratch/network or /scratch/gpfs
+# for live workshop ~/.condarc should be directing the install to /scratch/network or /scratch/gpfs
 $ module load anaconda3
 $ conda create -n rapids-0.16 -c rapidsai -c nvidia -c conda-forge -c defaults cuml=0.16 python=3.8 cudatoolkit=10.2
 ```
@@ -27,7 +27,7 @@ $ conda create -n rapids-0.16 -c rapidsai -c nvidia -c conda-forge -c defaults c
 Or install all components of Rapids:
 
 ```bash
-# ~/.condarc should directing the install to /scratch/network or /scratch/gpfs
+# for live workshop ~/.condarc should be directing the install to /scratch/network or /scratch/gpfs
 $ module load anaconda3
 $ conda create -n rapids-0.16 -c rapidsai -c nvidia -c conda-forge -c defaults rapids=0.16 python=3.8 cudatoolkit=10.2
 ```
