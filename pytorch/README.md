@@ -83,13 +83,26 @@ $ cd
 $ vim .condarc
 ```
 
+### Adroit
+
 Edit your file as follows:
 
 ```
+$ cat ~/.condarc
 pkgs_dirs:
- - /scratch/network/<YourNetID>/conda-pkgs
+ - /scratch/network/<YourNetID>/ML_WORKSHOP/conda-pkgs
 envs_dirs:
- - /scratch/network/<YourNetID>/conda-envs
+ - /scratch/network/<YourNetID>/ML_WORKSHOP/conda-envs
+```
+
+### Della, Perseus, Tiger or Traverse
+
+```
+$ cat ~/.condarc
+pkgs_dirs:
+ - /scratch/gpfs/<YourNetID>/ML_WORKSHOP/conda-pkgs
+envs_dirs:
+ - /scratch/gpfs/<YourNetID>/ML_WORKSHOP/conda-envs
 ```
 
 Check that it is correct with:
