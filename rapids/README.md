@@ -14,29 +14,7 @@ For large datasets, these GPU-based implementations can complete 10-50x faster t
 
 [Getting started](https://rapids.ai/start.html)
 
-## Install to /scratch/network
-
-You can request more space in `/home/<YourNetID>` for installing software but because Conda environment are easy to remake we will do the installation on `/scratch/network/<YourNetID>`. Note that this filesystem is not backed up but it provides a vast amount of space (100 GB by default).
-
-```bash
-$ ssh adroit
-$ cd
-$ vim .condarc
-```
-
-Edit your file as follows:
-
-```
-pkgs_dirs:
- - /scratch/network/<YourNetID>/conda/pkgs
-```
-
-Check that it is correct with:
-
-```bash
-$ module load anaconda3
-$ conda config --show
-```
+## Installation
 
 Install `cuml` and its dependencies `cudf` and `dask-cudf`:
 
@@ -54,20 +32,16 @@ $ module load anaconda3
 $ conda create -n rapids-0.16 -c rapidsai -c nvidia -c conda-forge -c defaults rapids=0.16 python=3.8 cudatoolkit=10.2
 ```
 
-After the installation one can recover space by deleting the index cache, lock files, unused cache packages, and tarballs:
-
-```
-$ conda clean -a
-```
-
 ## Using cuDF
 
-Note that Rapids requires a GPU with compute capability of 6.0+. This means the K40c GPUs on adroit-h11g4 cannot be used (they are CC 3.5). We mut request the V100 node (CC 7.0). TigerGPU is CC 6.0.
+Note that Rapids requires a GPU with compute capability (CC) of 6.0 and greater. This means the K40c GPUs on `adroit-h11g4` cannot be used (they are CC 3.5). On Adroit we mut request a V100 GPU (CC 7.0). TigerGPU is CC 6.0.
+
+Below is a simple interactive session on Adroit checking the installation:
 
 ```bash
 $ salloc -N 1 -n 1 -t 5 --gres=gpu:tesla_v100:1
 $ module load anaconda3
-$ conda activate /scratch/network/$USER/rapids-env
+$ conda activate rapids-0.16
 $ python
 >>> import cudf
 >>> s = cudf.Series([1, 2, 3, None, 4])
@@ -98,7 +72,7 @@ Submitting a job to the Slurm scheduler:
 
 module purge
 module load anaconda3
-conda activate /scratch/network/$USER/rapids-env
+conda activate rapids-0.16
 
 python rapids.py
 ```
@@ -134,7 +108,7 @@ dtype: int64
 
 module purge
 module load anaconda3
-conda activate /scratch/network/jdh4/rapids-env
+conda activate rapids-0.16
 
 python rapids.py
 ```
@@ -215,9 +189,9 @@ Wall time: 304 ms
 cuDF and cuML are available on the IBM conda channel. You can make an environment like this:
 
 ```
-ssh traverse
-module load anaconda3
-conda create --name rapids-env --channel https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda cudf cuml
+$ ssh <YourNetID>@traverse.princeton.edu
+$ module load anaconda3
+$ conda create --name rapids-env --channel https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda cudf cuml
 # accept the license agreement
 ```
 
