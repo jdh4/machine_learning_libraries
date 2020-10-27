@@ -184,10 +184,26 @@ See the [documentation](https://docs.rapids.ai/api/cuml/stable/) for `cuML` and 
 Follow the commands below to run a simple example on Adroit:
 
 ```bash
-$ conda activate rapids-0.16
-$ conda install scikit-learn ipywidgets
-$ wget https://raw.githubusercontent.com/rapidsai/notebooks/branch-0.13/cuml/svm_demo.ipynb
-$ salloc -N 1 -n 1 -t 5 --gres=gpu:tesla_v100:1
+import cudf
+from cuml.linear_model import LogisticRegression
+import numpy as np
+
+N = 10000
+X = np.random.normal(size=(N, 10)).astype(np.float32)
+y = np.asarray([0,1]*(N//2), dtype=np.int32)
+
+#pca_float = PCA(n_components = 2)
+#pca_float.fit(X)
+
+#trans_gdf_float = pca_float.transform(gdf_float)
+
+#X_train, X_test, y_train, y_test = train_test_split(df, 'y', train_size=0.8)
+
+reg = LogisticRegression()
+reg.fit(X, y)
+
+X_test = np.random.normal(size=(10, 10)).astype(np.float32)
+print(reg.predict(X_test))
 ```
 
 This [example](https://github.com/rapidsai/notebooks/blob/branch-0.13/cuml/svm_demo.ipynb) can be ran as follows:
