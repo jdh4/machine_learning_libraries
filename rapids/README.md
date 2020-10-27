@@ -56,7 +56,7 @@ dtype: int64
 $ exit
 ```
 
-See this [guide](https://rapidsai.github.io/projects/cudf/en/0.12.0/10min.html) for a 10-minute introduction to cuDF and Dask-cuDF.
+See this [guide](https://docs.rapids.ai/api/cudf/stable/) for a 10-minute introduction to cuDF and Dask-cuDF.
 
 Submitting a job to the Slurm scheduler:
 
