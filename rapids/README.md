@@ -49,7 +49,7 @@ $ python
 0       1
 1       2
 2       3
-3    null
+3    <NA>
 4       4
 dtype: int64
 >>> exit()
