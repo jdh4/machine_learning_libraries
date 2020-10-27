@@ -1,18 +1,16 @@
 # NVIDIA Rapids
 
-Rapids is sort of like Pandas, a subset of Scikit-learn and NetworkX (and more) running on GPUs:
+[Rapids](https://rapids.ai/start.html) is sort of like Pandas, a subset of Scikit-learn and NetworkX (and much more) running on GPUs:
 
-+ cuDF is a GPU DataFrame library for loading, joining, aggregating, filtering, and otherwise manipulating data with a Pandas-like API.
++ `cuDF` is a GPU DataFrame library for loading, joining, aggregating, filtering, and otherwise manipulating data with a Pandas-like API.
 
-+ cuML
++ `cuML` is a suite of GPU libraries that implement machine learning algorithms that share compatible APIs with other RAPIDS projects and Scikit-learn.
 
-cuDF provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
++ `cuGraph` is a GPU accelerated graph analytics library with functionality like `NetworkX` 
 
-cuML is a suite of high-level libraries that implement machine learning algorithms that share compatible APIs with other RAPIDS projects.
++ See also `cuSignal`, `cuXFilter`, `cuSpatial` and more
 
-cuML enables data scientists, researchers, and software engineers to run traditional tabular ML tasks on GPUs without going into the details of CUDA programming. In most cases, cuML's Python API matches the API from scikit-learn.
-
-For large datasets, these GPU-based implementations can complete 10-50x faster than their CPU equivalents.
++ Spark 3.0 integrates with Rapids
 
 <p align="center"><img src="https://github.com/rapidsai/cudf/blob/branch-0.13/img/rapids_arrow.png" width="80%"/></p>
 
