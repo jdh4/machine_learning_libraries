@@ -88,7 +88,7 @@ Submitting a job to the Slurm scheduler:
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --mem=8G                 # total memory per node
 #SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
-#SBATCH --gres=gpu:tesla_v100:1
+#SBATCH --gres=gpu:tesla_v100:1  # this line is for adroit only
 
 module purge
 module load anaconda3
