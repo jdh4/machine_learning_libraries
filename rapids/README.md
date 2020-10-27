@@ -16,7 +16,7 @@ For large datasets, these GPU-based implementations can complete 10-50x faster t
 
 ## Installation
 
-### Adroit, Della, Perseus, Tiger
+### Adroit or Tiger
 
 Install `cuml` and its dependencies `cudf` and `dask-cudf`:
 
