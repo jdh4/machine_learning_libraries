@@ -14,9 +14,6 @@
 
 + Spark 3.0 integrates with Rapids
 
-See this [guide](https://docs.rapids.ai/api/cudf/stable/) for a 10-minute introduction to `cuDF` and `Dask-cuDF`.
-
-
 <p align="center"><img src="https://github.com/rapidsai/cudf/blob/branch-0.13/img/rapids_arrow.png" width="80%"/></p>
 
 ## Installation
@@ -54,6 +51,8 @@ $ conda create --name rapids-env --channel ${CHNL} cudf cuml
 There are also dask-based packages available like dask-cudf.
 
 ## Using cuDF
+
+See this [guide](https://docs.rapids.ai/api/cudf/stable/) for a 10-minute introduction to `cuDF` and `Dask-cuDF`.
 
 Note that Rapids requires a GPU with compute capability (CC) of 6.0 and greater. This means the K40c GPUs on `adroit-h11g4` cannot be used (they are CC 3.5). On Adroit we mut request a V100 GPU (CC 7.0). TigerGPU is CC 6.0.
 
@@ -169,8 +168,12 @@ print(ddf.compute())
 
 ## Machine Learning Example
 
+See this [guide](https://docs.rapids.ai/api/cuml/stable/) for an introduction to `cuML`.
+
+Follow the commands below to run a simple example on Adroit:
+
 ```bash
-$ conda activate /scratch/network/$USER/rapids-env
+$ conda activate rapids-0.16
 $ conda install scikit-learn ipywidgets
 $ wget https://raw.githubusercontent.com/rapidsai/notebooks/branch-0.13/cuml/svm_demo.ipynb
 $ salloc -N 1 -n 1 -t 5 --gres=gpu:tesla_v100:1
