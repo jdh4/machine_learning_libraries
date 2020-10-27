@@ -1,10 +1,14 @@
 # NVIDIA Rapids
 
-Built based on the Apache Arrow columnar memory format, cuDF is a GPU DataFrame library for loading, joining, aggregating, filtering, and otherwise manipulating data.
+Rapids is sort of like Pandas, a subset of Scikit-learn and NetworkX (and more) running on GPUs:
+
++ cuDF is a GPU DataFrame library for loading, joining, aggregating, filtering, and otherwise manipulating data with a Pandas-like API.
+
++ cuML
 
 cuDF provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
 
-cuML is a suite of libraries that implement machine learning algorithms and mathematical primitives functions that share compatible APIs with other RAPIDS projects.
+cuML is a suite of high-level libraries that implement machine learning algorithms that share compatible APIs with other RAPIDS projects.
 
 cuML enables data scientists, researchers, and software engineers to run traditional tabular ML tasks on GPUs without going into the details of CUDA programming. In most cases, cuML's Python API matches the API from scikit-learn.
 
