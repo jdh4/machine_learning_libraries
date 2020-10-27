@@ -16,6 +16,8 @@ For large datasets, these GPU-based implementations can complete 10-50x faster t
 
 ## Installation
 
+### Adroit, Della, Perseus, Tiger
+
 Install `cuml` and its dependencies `cudf` and `dask-cudf`:
 
 ```bash
@@ -31,6 +33,20 @@ Or install all components of Rapids:
 $ module load anaconda3
 $ conda create -n rapids-0.16 -c rapidsai -c nvidia -c conda-forge -c defaults rapids=0.16 python=3.8 cudatoolkit=10.2
 ```
+
+### Traverse
+
+`cuDF` and `cuML` are available in the IBM WML-CE channel. You can make an environment like this:
+
+```
+$ ssh <YourNetID>@traverse.princeton.edu
+$ module load anaconda3
+$ CHNL="https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda"
+$ conda create --name rapids-env --channel ${CHNL} cudf cuml
+# accept the license agreement
+```
+
+There are also dask-based packages available like dask-cudf.
 
 ## Using cuDF
 
@@ -183,19 +199,6 @@ R2 score: cumlSVR 0.940174859165765, sklSVR 0.9401745984283644
 CPU times: user 198 ms, sys: 105 ms, total: 303 ms
 Wall time: 304 ms
 ```
-
-## Traverse
-
-cuDF and cuML are available on the IBM conda channel. You can make an environment like this:
-
-```
-$ ssh <YourNetID>@traverse.princeton.edu
-$ module load anaconda3
-$ conda create --name rapids-env --channel https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda cudf cuml
-# accept the license agreement
-```
-
-There are also dask-based packages available like dask-cudf.
 
 ## Useful Links
 
