@@ -50,7 +50,7 @@ $ python3 download_mnist.py
 
 The Slurm below may be used on Tiger with build according to `install_jax_tigergpu.sh`:
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=jax-gpu       # create a short name for your job
 #SBATCH --nodes=1                # node count
