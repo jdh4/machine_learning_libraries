@@ -17,7 +17,7 @@ $ ssh adroit
 $ module load julia/1.4.1
 $ julia
 julia> ]
-(v1.2) pkg> add Flux, Zygote, Metalhead, Images
+(@v1.4) pkg> add Flux, Zygote, Metalhead, Images
 # press the backspace or delete key
 julia> using Metalhead
 julia> Metalhead.download(CIFAR10)
