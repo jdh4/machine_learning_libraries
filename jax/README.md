@@ -48,7 +48,33 @@ $ python3 download_mnist.py
 
 ## Example Job for GPU Version
 
-The Slurm below may be used on Tiger with build according to `install_jax_tigergpu.sh`:
+First obtain the JAX script. Also, the compute nodes do not have internet access so we have to download the data on the head node:
+
+```bash
+$ ssh <YourNetID>@tigergpu.princeton.edu
+$ module load anaconda3
+$ conda activate jax-gpu  # installation directions above
+$ mkdir /scratch/gpfs/<YourNetID>/jax_test && cd /scratch/gpfs/<YourNetID>/jax_test
+$ wget https://raw.githubusercontent.com/google/jax/master/examples/mnist_classifier.py
+$ wget <download_data.py>
+$ python download_data.py
+```
+
+The JAX source code needs to be modified so that it doesn't try to perform the download on the compute node. With the installation having been done in `~/software`, next you need to make the `mnist_raw()` function in `software/jax/examples/datasets.py` look like this:
+
+```python
+#for filename in ["train-images-idx3-ubyte.gz", "train-labels-idx1-ubyte.gz",
+#                   "t10k-images-idx3-ubyte.gz", "t10k-labels-idx1-ubyte.gz"]:
+#    _download(base_url + filename, filename)
+ 
+  _DATA = os.getcwd() + "/data"
+  train_images = parse_images(path.join(_DATA, "train-images-idx3-ubyte.gz"))
+  train_labels = parse_labels(path.join(_DATA, "train-labels-idx1-ubyte.gz"))
+  test_images = parse_images(path.join(_DATA, "t10k-images-idx3-ubyte.gz"))
+  test_labels = parse_labels(path.join(_DATA, "t10k-labels-idx1-ubyte.gz"))
+```
+
+The Slurm script below (job.slurm) may be used on Tiger when JAX is built according to `install_jax_tigergpu.sh`:
 
 ```bash
 #!/bin/bash
@@ -68,26 +94,10 @@ export XLA_FLAGS=--xla_gpu_cuda_data_dir=/usr/local/cuda-10.2
 python mnist_classifier.py
 ```
 
-On adroit use `#SBATCH --gres=gpu:tesla_v100:1` and the modules used in `install_jax_adroitgpu.sh`.
-
-The example below is from `https://github.com/google/jax/blob/master/examples/mnist_classifier.py`.
+On adroit use `#SBATCH --gres=gpu:tesla_v100:1` and the modules used in `install_jax_adroitgpu.sh`. Submit the job with the following command:
 
 ```
-$ wget https://raw.githubusercontent.com/google/jax/master/examples/mnist_classifier.py
-```
-
-Next make the appropriate lines in the file `software/jax/examples/datasets.py` in the function `mnist_raw()` look like this:
-
-```python
-#for filename in ["train-images-idx3-ubyte.gz", "train-labels-idx1-ubyte.gz",
-#                   "t10k-images-idx3-ubyte.gz", "t10k-labels-idx1-ubyte.gz"]:
-#    _download(base_url + filename, filename)
- 
-  _DATA = os.getcwd() + "/data"
-  train_images = parse_images(path.join(_DATA, "train-images-idx3-ubyte.gz"))
-  train_labels = parse_labels(path.join(_DATA, "train-labels-idx1-ubyte.gz"))
-  test_images = parse_images(path.join(_DATA, "t10k-images-idx3-ubyte.gz"))
-  test_labels = parse_labels(path.join(_DATA, "t10k-labels-idx1-ubyte.gz"))
+$ sbatch job.slurm
 ```
 
 Here is the output of the job:
