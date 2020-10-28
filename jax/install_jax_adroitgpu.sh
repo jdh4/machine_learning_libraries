@@ -1,4 +1,5 @@
 #!/bin/bash
+module purge
 module load anaconda3/2020.7
 conda create --name jax-gpu numpy scipy cython six -y
 conda activate jax-gpu
