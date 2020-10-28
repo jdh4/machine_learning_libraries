@@ -29,7 +29,7 @@ Now run the script:
 ```bash
 $ cd intro_machine_learning_libs/julia/flux_cpu
 $ wget https://raw.githubusercontent.com/FluxML/model-zoo/master/tutorials/60-minute-blitz.jl
-# comment out line 287 since we already downloaded the images (#Metalhead.download(CIFAR10))
+# comment out line 287 since we already downloaded the images, i.e.,  #Metalhead.download(CIFAR10)
 $ sbatch job.slurm  # this will take about 50 minutes to run
 ```
 
