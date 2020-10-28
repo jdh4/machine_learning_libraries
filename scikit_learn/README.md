@@ -163,7 +163,7 @@ Accuracy (test): 84.1 percent
 Below is the effect of CPU-cores on the run time:
 
 | cpus-per-task | time |
-|+----+|+-----+|
+|:----:|:-----:|
 | 4  | 56:19 |
 | 16 | 20:22 |
 
