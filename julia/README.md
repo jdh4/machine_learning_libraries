@@ -14,7 +14,7 @@ Here is a 60-minute [introduction](https://github.com/FluxML/model-zoo/blob/mast
 
 ```bash
 $ ssh adroit
-$ module load julia/1.2.0
+$ module load julia/1.4.1
 $ julia
 julia> ]
 (v1.2) pkg> add Flux, Zygote, Metalhead, Images
