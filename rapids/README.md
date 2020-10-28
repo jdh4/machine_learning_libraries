@@ -1,6 +1,6 @@
 # NVIDIA Rapids
 
-[Rapids](https://rapids.ai/start.html) is something like a subset of Pandas, Scikit-learn and NetworkX (and more) running on GPUs:
+[Rapids](https://rapids.ai/start.html) is something like Pandas, Scikit-learn and NetworkX (and more) running on GPUs:
 
 + `cuDF` is a GPU DataFrame library for loading, joining, aggregating, filtering, and otherwise manipulating data with a Pandas-like API.
 
