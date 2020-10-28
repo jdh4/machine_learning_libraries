@@ -211,7 +211,7 @@ spark-submit --total-executor-cores 6 --executor-memory 4G random_forest_classif
 The output of the run is:
 
 ```bash
-$ cat slurm.out
+$ cat slurm-*.out | grep -v INFO
 ...
   total: 4.680999166
   findSplits: 2.825805252
