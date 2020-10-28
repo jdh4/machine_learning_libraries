@@ -58,16 +58,16 @@ $ sbatch job.slurm
 
 Spark ML is the machine learning component of Spark. The previous library was called mllib.
 
-The documentaion for the Python API with [Spark ML 2.2](https://spark.apache.org/docs/2.2.0/api/python/pyspark.ml.html) is here.
+The documentaion for the Python API with [Spark ML 2.4](https://spark.apache.org/docs/2.4.6/api/python/pyspark.ml.html) is here.
 
-The Spark 2.2 machine learning examples are here:
+The Spark 2.4 machine learning examples are here:
 
 ```bash
 # ssh tiger, della, perseus, adroit
-$ cd /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/examples/src/main
+$ cd /usr/licensed/spark/spark-2.4.6-bin-hadoop2.7/examples/src/main
 $ ls
 java  python  r  resources  scala
-$ cd /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/examples/src/main/python/ml
+$ cd /usr/licensed/spark/spark-2.4.6-bin-hadoop2.7/examples/src/main/python/ml
 $ ls
 aft_survival_regression.py                   logistic_regression_with_elastic_net.py
 als_example.py                               max_abs_scaler_example.py
@@ -173,8 +173,8 @@ Run the commands below:
 ```bash
 $ git clone https://github.com/PrincetonUniversity/intro_ml_libs
 $ cd intro_ml_libs/spark
-$ cp /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/examples/src/main/python/ml/random_forest_classifier_example.py .
-$ cp /usr/licensed/spark/spark-2.2.0-bin-hadoop2.7/data/mllib/sample_libsvm_data.txt .
+$ cp /usr/licensed/spark/spark-2.4.6-bin-hadoop2.7/examples/src/main/python/ml/random_forest_classifier_example.py .
+$ cp /usr/licensed/spark/spark-2.4.6-bin-hadoop2.7/data/mllib/sample_libsvm_data.txt .
 ```
 
 Use a text editor to replace line 39 of `random_forest_classifier_example.py` with this:
@@ -201,8 +201,8 @@ You can see the updated examples on [GitHub](https://github.com/apache/spark/tre
 #SBATCH --time=00:15:00          # total run time limit (HH:MM:SS)
 
 module purge
-module load anaconda3/2019.10
-module load spark/hadoop2.7/2.2.0
+module load anaconda3/2018.12
+module load spark/hadoop2.7/2.4.6
 
 spark-start
 spark-submit --total-executor-cores 6 --executor-memory 4G random_forest_classifier_example.py
