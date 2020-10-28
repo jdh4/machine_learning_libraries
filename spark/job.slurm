@@ -7,8 +7,7 @@
 #SBATCH --time=00:15:00          # total run time limit (HH:MM:SS)
 
 module purge
-module load anaconda3/2019.10
-module load spark/hadoop2.7/2.2.0
+module load anaconda3/2018.12 spark/hadoop2.7/2.4.6
 
 spark-start
 spark-submit --total-executor-cores 6 --executor-memory 4G random_forest_classifier_example.py
