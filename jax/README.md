@@ -48,6 +48,8 @@ $ python3 download_mnist.py
 
 ## Example Job for GPU Version
 
+The Slurm below may be used on Tiger with build according to `install_jax_tigergpu.sh`:
+
 ```
 #!/bin/bash
 #SBATCH --job-name=jax-gpu       # create a short name for your job
@@ -65,6 +67,8 @@ export XLA_FLAGS=--xla_gpu_cuda_data_dir=/usr/local/cuda-10.2
 
 python mnist_classifier.py
 ```
+
+On adroit use `#SBATCH --gres=gpu:tesla_v100:1` and the modules used in `install_jax_adroitgpu.sh`.
 
 The example below is from `https://github.com/google/jax/blob/master/examples/mnist_classifier.py`.
 
