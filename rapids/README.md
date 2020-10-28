@@ -149,7 +149,7 @@ conda activate rapids-0.16
 python rapids.py
 ```
 
-Use `#SBATCH --gres=gpu:tesla_v100:1` on Adroit and `#SBATCH --gres=gpu:1` on Tiger.
+Use `#SBATCH --gres=gpu:tesla_v100:2` on Adroit and `#SBATCH --gres=gpu:2` on Tiger.
 
 Below is the output of this simple example:
 
