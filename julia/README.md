@@ -20,7 +20,7 @@ julia> ]
 (@v1.4) pkg> add Flux, Zygote, Metalhead, Images
 # press the backspace or delete key
 julia> using Metalhead
-julia> Metalhead.download(CIFAR10)
+julia> Metalhead.download(CIFAR10)  # download data since no internet access on compute nodes
 julia> exit()
 ```
 
