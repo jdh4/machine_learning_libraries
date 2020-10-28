@@ -70,6 +70,73 @@ python myscript.py
 
 ## Example Job
 
+```
+import os
+import numpy as np
+import pandas as pd
+
+labels = {'pos':1, 'neg':0}
+df = pd.DataFrame()
+for s in ('train', 'test'):
+  for l in ('pos', 'neg'):
+    path = 'aclImdb/' + s + '/' + l
+    for file in os.listdir(path):
+      with open(os.path.join(path, file), 'r') as infile:
+        txt = infile.read()
+      df = df.append([[txt, labels[l]]], ignore_index=True)
+df.columns = ['review', 'sentiment']
+
+import re
+from bs4 import BeautifulSoup
+from nltk.stem.porter import PorterStemmer
+
+# use the partial module to remove duplicate code from these two methods
+def review_to_words(raw_review):
+    review_text = BeautifulSoup(raw_review, 'lxml').get_text()
+    letters_only = re.sub("[^a-zA-Z]", " ", review_text)
+    words = letters_only.lower().split()
+    return " ".join(words)
+
+def review_to_words_porter(raw_review):
+    review_text = BeautifulSoup(raw_review, 'lxml').get_text()
+    letters_only = re.sub("[^a-zA-Z]", " ", review_text)
+    words = letters_only.lower().split()
+    porter = PorterStemmer()
+    return " ".join(porter.stem(word) for word in words)
+
+split = int(0.6 * df.shape[0])
+X_train = df.iloc[:split, 0].values
+y_train = df.iloc[:split, 1].values
+X_test = df.iloc[split:, 0].values
+y_test = df.iloc[split:, 1].values
+
+from sklearn.model_selection import GridSearchCV
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LogisticRegression
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+from nltk.corpus import stopwords
+stops = stopwords.words("english")
+
+tfidf = TfidfVectorizer(strip_accents=None, lowercase=False, preprocessor=None, max_features=7500)
+param_grid = [{'vect__ngram_range': [(1, 3)], 'vect__stop_words': [stops, None],
+               'vect__tokenizer': [review_to_words, review_to_words_porter],
+               'clf__C': [1.0, 10.0, 100.0]},
+              {'vect__ngram_range': [(1, 3)], 'vect__stop_words': [stops, None],
+               'vect__tokenizer': [review_to_words, review_to_words_porter],
+               'clf__C': [1.0, 10.0, 100.0],
+               'vect__use_idf': [False], 'vect__norm': [None]}]
+lr_tfidf = Pipeline([('vect', tfidf), ('clf', LogisticRegression(max_iter=250))])
+gs_lr_tfidf = GridSearchCV(lr_tfidf, param_grid, scoring='accuracy', cv=5, verbose=1, n_jobs=-1)
+gs_lr_tfidf.fit(X_train, y_train)
+
+print(gs_lr_tfidf.best_params_)
+
+clf = gs_lr_tfidf.best_estimator_
+print('Accuracy (train): %.1f percent' % (100 * clf.score(X_train, y_train)))
+print('Accuracy (test): %.1f percent' % (100 * clf.score(X_test, y_test)))
+```
+
 
 ## Another Example
 
