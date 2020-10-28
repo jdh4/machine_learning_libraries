@@ -5,7 +5,7 @@
 + Conventional models (not a deep learning library)
 + Takes full advantage of the flexibility of Python
 + Interoperable with Pandas
-+ Single-node only with multithreading, very limited GPU support (XGB)
++ Single-node only with multithreading, some GPU support (e.g., XGBoost)
 + Excellent [documentation](https://scikit-learn.org/stable/user_guide.html) (good way to prepare for ML engineer and data scientist interviews)
 
 For an introduction to machine learning and Scikit-learn see this GitHub [repo and book](https://github.com/ageron/handson-ml2) by Aurelien Geron.
