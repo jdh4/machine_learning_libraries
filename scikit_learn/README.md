@@ -70,6 +70,19 @@ python myscript.py
 
 ## Example Job
 
+Sentiment analysis on [movie reviews](http://ai.stanford.edu/~amaas/data/sentiment/). Here are a few samples:
+
+```
+                                              review  sentiment
+0  Zentropa has much in common with The Third Man...          1
+1  Zentropa is the most original movie I've seen ...          1
+2  Lars Von Trier is never backward in trying out...          1
+3  *Contains spoilers due to me having to describ...          1
+4  That was the first thing that sprang to mind a...          1
+```
+
+A code to train a logistic regression model using bag-of-words and TF-IDF is below:
+
 ```python
 import os
 import numpy as np
@@ -136,6 +149,23 @@ clf = gs_lr_tfidf.best_estimator_
 print('Accuracy (train): %.1f percent' % (100 * clf.score(X_train, y_train)))
 print('Accuracy (test): %.1f percent' % (100 * clf.score(X_test, y_test)))
 ```
+
+The output is:
+
+```
+Fitting 5 folds for each of 24 candidates, totalling 120 fits
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 16 concurrent workers.
+
+Accuracy (train): 88.9 percent
+Accuracy (test): 84.1 percent
+```
+
+Below is the effect of CPU-cores on the run time:
+
+| cpus-per-task | time |
+|+----+|+-----+|
+| 4  | 56:19 |
+| 16 | 20:22 |
 
 
 ## Another Example
