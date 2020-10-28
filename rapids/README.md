@@ -183,7 +183,7 @@ See the [documentation](https://docs.rapids.ai/api/cuml/stable/) for `cuML` and 
 
 Follow the commands below to run a simple example on Adroit:
 
-```bash
+```python
 import cudf
 from cuml.linear_model import LogisticRegression
 import numpy as np
@@ -192,46 +192,11 @@ N = 10000
 X = np.random.normal(size=(N, 10)).astype(np.float32)
 y = np.asarray([0,1]*(N//2), dtype=np.int32)
 
-#pca_float = PCA(n_components = 2)
-#pca_float.fit(X)
-
-#trans_gdf_float = pca_float.transform(gdf_float)
-
-#X_train, X_test, y_train, y_test = train_test_split(df, 'y', train_size=0.8)
-
 reg = LogisticRegression()
 reg.fit(X, y)
 
 X_test = np.random.normal(size=(10, 10)).astype(np.float32)
 print(reg.predict(X_test))
-```
-
-This [example](https://github.com/rapidsai/notebooks/blob/branch-0.13/cuml/svm_demo.ipynb) can be ran as follows:
-
-```bash
-$ ipython svm_demo.py 
-CPU times: user 1.99 s, sys: 786 ms, total: 2.78 s
-Wall time: 3.55 s
-CPU times: user 48.1 s, sys: 258 ms, total: 48.4 s
-Wall time: 48.5 s
-CPU times: user 196 ms, sys: 27 ms, total: 223 ms
-Wall time: 230 ms
-CPU times: user 8.91 s, sys: 0 ns, total: 8.91 s
-Wall time: 8.93 s
-Accuracy: cumlSVC 96.46000000000001%, sklSVC 96.46000000000001%
-CPU times: user 851 ms, sys: 68.8 ms, total: 920 ms
-Wall time: 942 ms
-CPU times: user 477 ms, sys: 318 ms, total: 796 ms
-Wall time: 798 ms
-CPU times: user 13 s, sys: 70.8 ms, total: 13.1 s
-Wall time: 13.1 s
-CPU times: user 6.71 ms, sys: 991 µs, total: 7.7 ms
-Wall time: 7.79 ms
-CPU times: user 2.72 s, sys: 0 ns, total: 2.72 s
-Wall time: 2.72 s
-R2 score: cumlSVR 0.940174859165765, sklSVR 0.9401745984283644
-CPU times: user 198 ms, sys: 105 ms, total: 303 ms
-Wall time: 304 ms
 ```
 
 ## Useful Links
