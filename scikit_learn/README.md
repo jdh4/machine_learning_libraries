@@ -3,7 +3,7 @@
 [Scikit-learn](https://scikit-learn.org/stable/) is a Python library for machine learning featuring:
 
 + Conventional models (not a deep learning library)
-+ Comfortable to use (elegant ML pipelines)
++ Takes full advantage of the flexibility of Python
 + Interoperable with Pandas
 + Single-node only with multithreading, very limited GPU support (XGB)
 + Excellent [documentation](https://scikit-learn.org/stable/user_guide.html) (good way to prepare for ML engineer and data scientist interviews)
